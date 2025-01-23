@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ntlogw2ntig0"]
+[gd_scene load_steps=16 format=3 uid="uid://ntlogw2ntig0"]
 
 [ext_resource type="Texture2D" uid="uid://6dx0ssxlmd35" path="res://Assets/Popup_test/ticket.jpg" id="1_t8vy3"]
 [ext_resource type="Script" path="res://Scripts/PopupHandler.gd" id="1_y7fme"]
@@ -29,9 +29,21 @@ shader_parameter/G = 0.0
 shader_parameter/B = 0.0
 shader_parameter/blur_strength = 0.1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b00bk"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kgij"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ooj62"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b00bk"]
+bg_color = Color(0.731823, 0.375544, 0.0861287, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uxs8"]
+bg_color = Color(0.47451, 0.231373, 0.0352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_401ih"]
 content_margin_left = 20.0
@@ -242,8 +254,9 @@ offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kgij")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b00bk")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_ooj62")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0uxs8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_401ih")
 text = "Cerrar"
 
