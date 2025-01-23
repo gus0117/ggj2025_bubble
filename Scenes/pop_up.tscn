@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://ntlogw2ntig0"]
+[gd_scene load_steps=15 format=3 uid="uid://ntlogw2ntig0"]
 
 [ext_resource type="Texture2D" uid="uid://6dx0ssxlmd35" path="res://Assets/Popup_test/ticket.jpg" id="1_t8vy3"]
 [ext_resource type="Script" path="res://Scripts/PopupHandler.gd" id="1_y7fme"]
+[ext_resource type="Resource" uid="uid://b5h1mneabwqmb" path="res://Resources/evidenceDB.tres" id="2_8a13u"]
 [ext_resource type="Shader" path="res://Shaders/gaussian_blur.gdshader" id="2_yoaxc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2jvi"]
@@ -138,6 +139,7 @@ offset_right = -0.368042
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y7fme")
+evidences = ExtResource("2_8a13u")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -225,9 +227,6 @@ layout_mode = 2
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
-text = "En el pasado, [b]lorem ipsum[/b] servía para el contenido escrito como ahora lo hacer las fotos de archivo. El lorem ipsum original utilizaba una sección de un libro llamado \"De Finibus Bonorum et Dolorem,\" escrito por Cicerón, el autor de la Antigua Roma. Las antiguas imprentas requerían un tedioso ajuste manual de cada letra y signo de puntuación. Así que, en su lugar, los trabajadores creaban libros de muestras tipográficas utilizando palabras y párrafos preestablecidos del tratado de Cicerón para ahorrar tiempo.
-
-Los impresores del siglo XVI desordenaron las palabras de \"De Finibus Bonorum et Dolorem” de Cicerón después de mezclar las palabras de cada frase. Abreviaron la palabra “dolorem”, que significa dolor, y la convirtieron en “lorem”, que no tiene un significado real. Ipsum significa a sí mismo. Así que “Lorem Ipsum”, se refiere a tu dolor. La palabra \"dolor fingido\" en la canción de Five Finger Death Punch en la letra de una canción moderna corresponde a lorem ipsum."
 
 [node name="ExitPopup" type="Button" parent="Panel"]
 layout_mode = 1

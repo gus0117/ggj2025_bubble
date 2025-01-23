@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EvidenceDB" load_steps=4 format=3 uid="uid://b5h1mneabwqmb"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Evidence.gd" id="1_jaa58"]
+[ext_resource type="Script" path="res://Scripts/Resources/EvidenceDB.gd" id="2_sikhe"]
+
+[sub_resource type="Resource" id="Resource_mkhgj"]
+script = ExtResource("1_jaa58")
+title = "ticket"
+img = "res://Assets/Popup_test/ticket.jpg"
+description = "En el pasado, [b]lorem ipsum[/b] servía para el contenido escrito como ahora lo hacer las fotos de archivo. El lorem ipsum original utilizaba una sección de un libro llamado \"De Finibus Bonorum et Dolorem,\" escrito por Cicerón, el autor de la Antigua Roma. Las antiguas imprentas requerían un tedioso ajuste manual de cada letra y signo de puntuación. Así que, en su lugar, los trabajadores creaban libros de muestras tipográficas utilizando palabras y párrafos preestablecidos del tratado de Cicerón para ahorrar tiempo.Los impresores del siglo XVI desordenaron las palabras de \"De Finibus Bonorum et Dolorem” de Cicerón después de mezclar las palabras de cada frase. Abreviaron la palabra “dolorem”, que significa dolor, y la convirtieron en “lorem”, que no tiene un significado real. Ipsum significa a sí mismo. Así que “Lorem Ipsum”, se refiere a tu dolor. La palabra \"dolor fingido\" en la canción de Five Finger Death Punch en la letra de una canción moderna corresponde a lorem ipsum."
+
+[resource]
+script = ExtResource("2_sikhe")
+evidenceDB = Array[ExtResource("1_jaa58")]([SubResource("Resource_mkhgj")])
