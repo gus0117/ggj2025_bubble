@@ -12,5 +12,8 @@ func _ready() -> void:
 func OpenPopup() -> void:
 	pass
 
+func ClosePopup() -> void:
+	pass
+
 func FadeInAnimation() -> void:
 	animation_player.play("FadeIn")

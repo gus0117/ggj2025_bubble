@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ntlogw2ntig0"]
+[gd_scene load_steps=14 format=3 uid="uid://ntlogw2ntig0"]
 
 [ext_resource type="Texture2D" uid="uid://6dx0ssxlmd35" path="res://Assets/Popup_test/ticket.jpg" id="1_t8vy3"]
 [ext_resource type="Script" path="res://Scripts/PopupHandler.gd" id="1_y7fme"]
@@ -27,6 +27,21 @@ shader_parameter/R = 0.0
 shader_parameter/G = 0.0
 shader_parameter/B = 0.0
 shader_parameter/blur_strength = 0.1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b00bk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ooj62"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_401ih"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 5.0
+bg_color = Color(0.886208, 0.475249, 0.159851, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="Animation" id="Animation_h4van"]
 resource_name = "FadeIn"
@@ -228,6 +243,9 @@ offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxFlat_b00bk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_ooj62")
+theme_override_styles/normal = SubResource("StyleBoxFlat_401ih")
 text = "Cerrar"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
