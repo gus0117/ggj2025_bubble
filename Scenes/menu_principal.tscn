@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtkrhxygtd2tb"]
+[gd_scene load_steps=5 format=3 uid="uid://dtkrhxygtd2tb"]
 
+[ext_resource type="Script" path="res://Script/menu_principal.gd" id="1_54xsd"]
 [ext_resource type="VideoStream" path="res://Assets/menu ogg.ogv" id="1_s7eee"]
 [ext_resource type="Theme" uid="uid://5wbfji3wdgbs" path="res://Resources/Button_Theme.tres" id="1_tw3o3"]
 
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_54xsd")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -29,6 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("1_s7eee")
 autoplay = true
+loop = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -85,3 +88,7 @@ text = "OPCIONES"
 layout_mode = 2
 theme = ExtResource("1_tw3o3")
 text = "SALIR"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Start_Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Settings_Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Exit_Button" to="." method="_on_exit_button_pressed"]
