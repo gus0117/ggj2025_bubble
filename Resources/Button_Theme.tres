@@ -1,9 +1,7 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://5wbfji3wdgbs"]
 
+[ext_resource type="FontFile" uid="uid://5yq70gcmwhlu" path="res://Assets/Fonts/ReenieBeanie.ttf" id="1_3gree"]
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI books & more.png" id="1_081he"]
-
-[sub_resource type="SystemFont" id="SystemFont_ujg5p"]
-font_names = PackedStringArray("Reenie Beanie")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c1m7i"]
 content_margin_left = 4.0
@@ -64,7 +62,7 @@ Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 70
-Button/fonts/font = SubResource("SystemFont_ujg5p")
+Button/fonts/font = ExtResource("1_3gree")
 Button/styles/disabled = SubResource("StyleBoxFlat_c1m7i")
 Button/styles/focus = SubResource("StyleBoxEmpty_0f2am")
 Button/styles/hover = SubResource("StyleBoxTexture_admsp")

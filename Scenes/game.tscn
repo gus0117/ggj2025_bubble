@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=5 format=3 uid="uid://cuxm13nayotxw"]
 
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI books & more.png" id="1_jl76l"]
+[ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="1_uycs6"]
+[ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="2_e6ymw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ykvv"]
+content_margin_left = 45.0
+content_margin_top = 50.0
+content_margin_right = 30.0
+content_margin_bottom = 50.0
+texture = ExtResource("1_jl76l")
+region_rect = Rect2(512, 79, 48, 64)
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -10,25 +20,104 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Titulocaso" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -564.0
+offset_right = 564.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("1_uycs6")
+theme_override_font_sizes/font_size = 40
+text = "Titulo del caso"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_top = 96.5
+offset_right = 305.0
+offset_bottom = 551.5
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_5ykvv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.720339, 0.548178, 0.0894659, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_e6ymw")
+text = "Coartada
+"
+horizontal_alignment = 1
+
+[node name="CoartadaRichText" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_e6ymw")
+theme_override_font_sizes/normal_font_size = 20
+text = "Aqui va la coartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd v oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd
+as
+dasdasd
+as
+d
+asd
+as
+d
+as
+d
+asd
+
+as
+d
+as
+d
+asd
+asd
+as
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.265
+anchor_top = 0.774
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -0.280029
+offset_top = 0.447968
+offset_right = 2.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+size_flags_horizontal = 3
+theme_override_constants/separation = 64
+alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 250
+alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+text = "Opcion1"
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-texture = ExtResource("1_jl76l")
+text = "Opcion2"
+
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Opcion3
+"
