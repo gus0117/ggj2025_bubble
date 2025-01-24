@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=17 format=3 uid="uid://cuxm13nayotxw"]
 
+[ext_resource type="Script" path="res://Scripts/Controllers/GameUIController.gd" id="1_1g15q"]
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="1_jl76l"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="1_uycs6"]
 [ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="2_e6ymw"]
@@ -39,6 +40,7 @@ offset_top = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1g15q")
 
 [node name="Titulocaso" type="Label" parent="."]
 visible = false

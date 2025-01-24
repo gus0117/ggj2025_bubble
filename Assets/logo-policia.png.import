@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btt1e2vk7n70r"
-path="res://.godot/imported/Pase Entrada.png-9a5017fa8c4c0cb733a07c1da7f77678.ctex"
+uid="uid://bvbh5jrk2yp0r"
+path="res://.godot/imported/logo-policia.png-34c1562e12f78111981284d473af12f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Pase Entrada.png"
-dest_files=["res://.godot/imported/Pase Entrada.png-9a5017fa8c4c0cb733a07c1da7f77678.ctex"]
+source_file="res://Assets/logo-policia.png"
+dest_files=["res://.godot/imported/logo-policia.png-34c1562e12f78111981284d473af12f3.ctex"]
 
 [params]
 
