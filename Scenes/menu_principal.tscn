@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtkrhxygtd2tb"]
+[gd_scene load_steps=4 format=3 uid="uid://dtkrhxygtd2tb"]
 
 [ext_resource type="Script" path="res://Scripts/menu_principal.gd" id="1_54xsd"]
-[ext_resource type="VideoStream" path="res://Assets/menu ogg.ogv" id="1_s7eee"]
 [ext_resource type="Theme" uid="uid://5wbfji3wdgbs" path="res://Resources/Button_Theme.tres" id="1_tw3o3"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="3_2r811"]
 
@@ -13,23 +12,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_54xsd")
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -960.0
-offset_top = -544.0
-offset_right = 960.0
-offset_bottom = 544.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("1_s7eee")
-autoplay = true
-loop = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
