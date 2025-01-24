@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=18 format=3 uid="uid://cuxm13nayotxw"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/GameUIController.gd" id="1_1g15q"]
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="1_jl76l"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bfeud22y3j3l1" path="res://Assets/Bubbles/Pressed/BubbleText3Pressed.png" id="10_4ofw8"]
 [ext_resource type="Texture2D" uid="uid://c3xck1bpkq8iy" path="res://Assets/Bubbles/Hover/BubbleText2Hover.png" id="10_t7t7w"]
 [ext_resource type="Texture2D" uid="uid://b84k5m85g7h52" path="res://Assets/Bubbles/Hover/BubbleText3Hover.png" id="13_vj5md"]
+[ext_resource type="PackedScene" uid="uid://ntlogw2ntig0" path="res://Scenes/pop_up.tscn" id="15_5l0mh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti5u0"]
 texture = ExtResource("2_s3yyx")
@@ -202,3 +203,11 @@ offset_top = 0.0719681
 offset_right = 0.00201416
 offset_bottom = 0.0579605
 expand_mode = 1
+
+[node name="PopUp" parent="." instance=ExtResource("15_5l0mh")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="BurbujaEvidencia1" to="." method="_on_burbuja_evidencia_1_pressed"]
+[connection signal="pressed" from="BurbujaEvidencia2" to="." method="_on_burbuja_evidencia_2_pressed"]
+[connection signal="pressed" from="BurbujaEvidencia3" to="." method="_on_burbuja_evidencia_3_pressed"]

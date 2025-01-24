@@ -264,3 +264,5 @@ text = "Cerrar"
 libraries = {
 "": SubResource("AnimationLibrary_0nhdq")
 }
+
+[connection signal="pressed" from="Panel/ExitPopup" to="." method="_on_exit_popup_pressed"]

@@ -14,24 +14,19 @@ class_name PopupHandler
 #Se utiliza un recurso para guardar las imagenes
 @export var evidences: EvidenceDB
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	OpenPopup(0)
-
-func OpenPopup(newIndex: int) -> void:
-	upgradeUI(newIndex)
+func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -> void:
+	title.text = newTitle
+	evidence_img.texture = load(evidencePath)
+	description.text = newDescription
 	self.visible = true
 	await get_tree().create_timer(1.5).timeout
 	FadeInAnimation()
 
-func upgradeUI(index: int)->void:
-	title.text = evidences.evidenceDB[index].title
-	evidence_img.texture = load(evidences.evidenceDB[index].img)
-	description.text = evidences.evidenceDB[index].description
-
 func ClosePopup() -> void:
-	pass
+	visible = false
 
 func FadeInAnimation() -> void:
 	animation_player.play("FadeIn")
+	
+func _on_exit_popup_pressed() -> void:
+	ClosePopup()
