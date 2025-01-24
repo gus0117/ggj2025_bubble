@@ -14,7 +14,7 @@ class_name Caso
 
 #region Dialogo
 
-@export var cuartada: String
+@export var coartada: String
 
 #region Prueba_1
 @export var urlPrueba1: String #URL del icono
