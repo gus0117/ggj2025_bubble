@@ -1,13 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=10 format=3 uid="uid://cuxm13nayotxw"]
 
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="1_jl76l"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="1_uycs6"]
 [ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="2_e6ymw"]
 [ext_resource type="Texture2D" uid="uid://btj7ngenshygn" path="res://Assets/UI/14 Border 03.png" id="2_s3yyx"]
 [ext_resource type="Texture2D" uid="uid://beymo03ajck2k" path="res://Assets/Bubbles/BubbleText1.png" id="4_uxpx0"]
-[ext_resource type="Texture2D" uid="uid://cpjjil71cotd2" path="res://Assets/Evidence/Ticket.png" id="5_ivtas"]
 [ext_resource type="Texture2D" uid="uid://cklp1aby2upq0" path="res://Assets/Bubbles/BubbleText2.png" id="6_cuctb"]
-[ext_resource type="Texture2D" uid="uid://c0vj5k12jb3ae" path="res://Assets/Evidence/Cat.png" id="7_ay3wr"]
 [ext_resource type="Texture2D" uid="uid://bf4w56buh0oc4" path="res://Assets/Bubbles/BubbleText3.png" id="8_bpdta"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti5u0"]
@@ -141,7 +139,6 @@ offset_left = 0.740997
 offset_top = -0.0300026
 offset_right = 0.0509949
 offset_bottom = -0.18
-texture = ExtResource("5_ivtas")
 expand_mode = 1
 
 [node name="BurbujaEvidencia2" type="TextureButton" parent="."]
@@ -166,7 +163,6 @@ offset_left = 17.667
 offset_top = 14.166
 offset_right = 3.87099
 offset_bottom = -0.239998
-texture = ExtResource("7_ay3wr")
 expand_mode = 1
 
 [node name="BurbujaEvidencia3" type="TextureButton" parent="."]
@@ -191,5 +187,4 @@ offset_left = 0.00498962
 offset_top = -0.0440063
 offset_right = 0.0699921
 offset_bottom = 0.0939941
-texture = ExtResource("5_ivtas")
 expand_mode = 1

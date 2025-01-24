@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvr5ud7vbij77"
-path="res://.godot/imported/Ticket.png-62736ddb9444a8b98ddccfc801d92b12.ctex"
+uid="uid://c351m2v4hfmd3"
+path="res://.godot/imported/Cuchara.png-0fe0307a48d8ae87fa297119810efec5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Ticket.png"
-dest_files=["res://.godot/imported/Ticket.png-62736ddb9444a8b98ddccfc801d92b12.ctex"]
+source_file="res://Assets/Evidence/Cuchara.png"
+dest_files=["res://.godot/imported/Cuchara.png-0fe0307a48d8ae87fa297119810efec5.ctex"]
 
 [params]
 

@@ -1,7 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://tg433ahge1et"]
+[gd_scene load_steps=6 format=3 uid="uid://tg433ahge1et"]
 
 [ext_resource type="Texture2D" uid="uid://by340ky8at0q5" path="res://Assets/Sospechosos/Sospechoso1.png" id="1_k3srg"]
 [ext_resource type="PackedScene" uid="uid://cuxm13nayotxw" path="res://Scenes/game.tscn" id="1_vyxb3"]
+
+[sub_resource type="Animation" id="Animation_6m5ns"]
+resource_name = "Nervioso"
+length = 0.15
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(780, 250), Vector2(777, 250), Vector2(780, 248), Vector2(783, 250)]
+}
+
+[sub_resource type="Animation" id="Animation_hba61"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(778, 250)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wrmgh"]
+_data = {
+"Nervioso": SubResource("Animation_6m5ns"),
+"RESET": SubResource("Animation_hba61")
+}
 
 [node name="MainGame" type="Node2D"]
 
@@ -10,6 +48,11 @@
 [node name="Game" parent="CanvasLayer" instance=ExtResource("1_vyxb3")]
 
 [node name="Sospechoso" type="Sprite2D" parent="."]
-position = Vector2(779, 236)
+position = Vector2(778, 250)
 scale = Vector2(0.556, 0.556)
 texture = ExtResource("1_k3srg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sospechoso"]
+libraries = {
+"": SubResource("AnimationLibrary_wrmgh")
+}

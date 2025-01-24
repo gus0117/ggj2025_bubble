@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0vj5k12jb3ae"
-path="res://.godot/imported/Cat.png-002adb615f867fbfab649c197263ef41.ctex"
+uid="uid://dsrjvgi2hxfss"
+path="res://.godot/imported/Reloj.png-7b130b369a88652eeaa75d13919fbfdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Cat.png"
-dest_files=["res://.godot/imported/Cat.png-002adb615f867fbfab649c197263ef41.ctex"]
+source_file="res://Assets/Evidence/Reloj.png"
+dest_files=["res://.godot/imported/Reloj.png-7b130b369a88652eeaa75d13919fbfdd.ctex"]
 
 [params]
 
