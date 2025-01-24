@@ -1,12 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=16 format=3 uid="uid://cuxm13nayotxw"]
 
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="1_jl76l"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="1_uycs6"]
 [ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="2_e6ymw"]
 [ext_resource type="Texture2D" uid="uid://btj7ngenshygn" path="res://Assets/UI/14 Border 03.png" id="2_s3yyx"]
-[ext_resource type="Texture2D" uid="uid://beymo03ajck2k" path="res://Assets/Bubbles/BubbleText1.png" id="4_uxpx0"]
-[ext_resource type="Texture2D" uid="uid://cklp1aby2upq0" path="res://Assets/Bubbles/BubbleText2.png" id="6_cuctb"]
-[ext_resource type="Texture2D" uid="uid://bf4w56buh0oc4" path="res://Assets/Bubbles/BubbleText3.png" id="8_bpdta"]
+[ext_resource type="Texture2D" uid="uid://cnbdyd11nip2e" path="res://Assets/Bubbles/Normal/BubbleText1.png" id="4_uxpx0"]
+[ext_resource type="Texture2D" uid="uid://cyhnsc7jp6rre" path="res://Assets/Bubbles/Normal/BubbleText2.png" id="6_cuctb"]
+[ext_resource type="Texture2D" uid="uid://bddkittui7y5y" path="res://Assets/Bubbles/Pressed/BubbleText1Pressed.png" id="6_muka7"]
+[ext_resource type="Texture2D" uid="uid://b31xv87an45yh" path="res://Assets/Bubbles/Hover/BubbleText1Hover.png" id="7_g2g8i"]
+[ext_resource type="Texture2D" uid="uid://dmur7xl4wj2m" path="res://Assets/Bubbles/Normal/BubbleText3.png" id="8_bpdta"]
+[ext_resource type="Texture2D" uid="uid://pcljs4ai3u01" path="res://Assets/Bubbles/Pressed/BubbleText2Pressed.png" id="8_j47ws"]
+[ext_resource type="Texture2D" uid="uid://bfeud22y3j3l1" path="res://Assets/Bubbles/Pressed/BubbleText3Pressed.png" id="10_4ofw8"]
+[ext_resource type="Texture2D" uid="uid://c3xck1bpkq8iy" path="res://Assets/Bubbles/Hover/BubbleText2Hover.png" id="10_t7t7w"]
+[ext_resource type="Texture2D" uid="uid://b84k5m85g7h52" path="res://Assets/Bubbles/Hover/BubbleText3Hover.png" id="13_vj5md"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti5u0"]
 texture = ExtResource("2_s3yyx")
@@ -115,16 +121,18 @@ as
 
 [node name="BurbujaEvidencia1" type="TextureButton" parent="."]
 layout_mode = 2
-anchor_left = 0.289
-anchor_top = 0.676
-anchor_right = 0.516
+anchor_left = 0.302
+anchor_top = 0.761
+anchor_right = 0.468
 anchor_bottom = 0.968
-offset_left = 0.071991
-offset_top = 24.952
-offset_right = -0.432007
-offset_bottom = 24.736
+offset_left = 0.0959778
+offset_top = -0.128021
+offset_right = -0.136047
+offset_bottom = 3.73602
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_uxpx0")
+texture_pressed = ExtResource("6_muka7")
+texture_hover = ExtResource("7_g2g8i")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -143,12 +151,14 @@ expand_mode = 1
 
 [node name="BurbujaEvidencia2" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 580.0
-offset_top = 460.0
-offset_right = 843.0
-offset_bottom = 646.0
+offset_left = 600.0
+offset_top = 483.0
+offset_right = 816.0
+offset_bottom = 636.0
 size_flags_horizontal = 3
 texture_normal = ExtResource("6_cuctb")
+texture_pressed = ExtResource("8_j47ws")
+texture_hover = ExtResource("10_t7t7w")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -167,12 +177,14 @@ expand_mode = 1
 
 [node name="BurbujaEvidencia3" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 847.0
-offset_top = 463.0
-offset_right = 1080.0
-offset_bottom = 632.0
+offset_left = 879.0
+offset_top = 486.0
+offset_right = 1088.0
+offset_bottom = 638.0
 size_flags_horizontal = 3
 texture_normal = ExtResource("8_bpdta")
+texture_pressed = ExtResource("10_4ofw8")
+texture_hover = ExtResource("13_vj5md")
 ignore_texture_size = true
 stretch_mode = 0
 
