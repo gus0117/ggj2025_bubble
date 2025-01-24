@@ -2,8 +2,7 @@ extends Control
 
 
 func _on_start_button_pressed() -> void:
-	pass
-	#get_tree().change_scene_to_file("res://nombre_escena.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main_game.tscn")
 
 func _on_settings_button_pressed() -> void:
 	pass # Replace with function body.
