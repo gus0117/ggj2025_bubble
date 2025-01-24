@@ -1,10 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=12 format=3 uid="uid://cuxm13nayotxw"]
 
-[ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI books & more.png" id="1_jl76l"]
+[ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="1_jl76l"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="1_uycs6"]
 [ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="2_e6ymw"]
+[ext_resource type="Texture2D" uid="uid://btj7ngenshygn" path="res://Assets/UI/14 Border 03.png" id="2_s3yyx"]
 [ext_resource type="Texture2D" uid="uid://beymo03ajck2k" path="res://Assets/Bubbles/BubbleText1.png" id="4_uxpx0"]
 [ext_resource type="Texture2D" uid="uid://cpjjil71cotd2" path="res://Assets/Evidence/Ticket.png" id="5_ivtas"]
+[ext_resource type="Texture2D" uid="uid://cklp1aby2upq0" path="res://Assets/Bubbles/BubbleText2.png" id="6_cuctb"]
+[ext_resource type="Texture2D" uid="uid://c0vj5k12jb3ae" path="res://Assets/Evidence/Cat.png" id="7_ay3wr"]
+[ext_resource type="Texture2D" uid="uid://bf4w56buh0oc4" path="res://Assets/Bubbles/BubbleText3.png" id="8_bpdta"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti5u0"]
+texture = ExtResource("2_s3yyx")
+texture_margin_left = 31.0
+texture_margin_top = 30.0
+texture_margin_right = 31.0
+texture_margin_bottom = 32.0
+region_rect = Rect2(129, 65, 62, 62)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ykvv"]
 content_margin_left = 45.0
@@ -19,14 +31,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 41.0
-offset_top = 17.0
-offset_right = 41.0
-offset_bottom = 17.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Titulocaso" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -43,11 +54,23 @@ theme_override_font_sizes/font_size = 40
 text = "Titulo del caso"
 horizontal_alignment = 1
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.035
+anchor_top = 0.702
+anchor_right = 0.964
+anchor_bottom = 0.98
+offset_left = 39.32
+offset_top = 17.104
+offset_right = 41.472
+offset_bottom = 13.96
+theme_override_styles/panel = SubResource("StyleBoxTexture_ti5u0")
+
 [node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 2
-offset_top = 96.5
+layout_mode = 1
 offset_right = 305.0
-offset_bottom = 551.5
+offset_bottom = 455.0
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_5ykvv")
 
@@ -92,18 +115,22 @@ asd
 as
 "
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="BurbujaEvidencia1" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 350.0
-offset_top = 435.0
-offset_right = 611.0
-offset_bottom = 624.0
+anchor_left = 0.289
+anchor_top = 0.676
+anchor_right = 0.516
+anchor_bottom = 0.968
+offset_left = 0.071991
+offset_top = 24.952
+offset_right = -0.432007
+offset_bottom = 24.736
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_uxpx0")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="TextureButton"]
+[node name="ImgEvidencia1" type="TextureRect" parent="BurbujaEvidencia1"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.319
@@ -114,5 +141,55 @@ offset_left = 0.740997
 offset_top = -0.0300026
 offset_right = 0.0509949
 offset_bottom = -0.18
+texture = ExtResource("5_ivtas")
+expand_mode = 1
+
+[node name="BurbujaEvidencia2" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 580.0
+offset_top = 460.0
+offset_right = 843.0
+offset_bottom = 646.0
+size_flags_horizontal = 3
+texture_normal = ExtResource("6_cuctb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ImgEvidencia2" type="TextureRect" parent="BurbujaEvidencia2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.293
+anchor_top = 0.217
+anchor_right = 0.609
+anchor_bottom = 0.62
+offset_left = 17.667
+offset_top = 14.166
+offset_right = 3.87099
+offset_bottom = -0.239998
+texture = ExtResource("7_ay3wr")
+expand_mode = 1
+
+[node name="BurbujaEvidencia3" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 847.0
+offset_top = 463.0
+offset_right = 1080.0
+offset_bottom = 632.0
+size_flags_horizontal = 3
+texture_normal = ExtResource("8_bpdta")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ImgEvidencia3" type="TextureRect" parent="BurbujaEvidencia3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.405
+anchor_top = 0.322
+anchor_right = 0.67
+anchor_bottom = 0.653
+offset_left = 0.00498962
+offset_top = -0.0440063
+offset_right = 0.0699921
+offset_bottom = 0.0939941
 texture = ExtResource("5_ivtas")
 expand_mode = 1

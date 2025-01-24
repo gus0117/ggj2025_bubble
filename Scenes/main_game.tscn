@@ -10,6 +10,6 @@
 [node name="Game" parent="CanvasLayer" instance=ExtResource("1_vyxb3")]
 
 [node name="Sospechoso" type="Sprite2D" parent="."]
-position = Vector2(724, 272.08)
+position = Vector2(779, 236)
 scale = Vector2(0.556, 0.556)
 texture = ExtResource("1_k3srg")
