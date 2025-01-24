@@ -3,7 +3,9 @@ extends Node
 var saveCaseResourcePath:= "res://Resources/Casos/"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	CaseResourceGenerator()
+	#EJECUTAR SOLO UNA VEZ CUANDO SE ACTUALICE LA BASE DE DATOS
+	#CaseResourceGenerator()
+	pass
 
 
 # Genera los Resources de casos desde un archivo JSON
@@ -39,16 +41,14 @@ func CaseResourceGenerator()->void:
 				new_caso.p3_debil = c.p3_debil
 				new_caso.p3_incompleta = c.p3_incompleta
 				new_caso.p3_completa = c.p3_completa
-				new_caso.esVerdad = false
-				var save_result = ResourceSaver.save(new_caso, saveCaseResourcePath)
-				if save_result != OK:
-					print(save_result)
+				new_caso.esVerdad = c.esVerdad
+				
+				#Para guardar el resource "caso" se debe incluir en el path formato .tres
+				#var save_result = ResourceSaver.save(new_caso, "res://Resources/Casos/"+new_caso.titulo+".tres")
+				var save_result = ResourceSaver.save(new_caso, saveCaseResourcePath+new_caso.titulo+".tres")
+				if save_result == OK:
+					print(new_caso.titulo, " ...saved")
+				else:
+					print("No se pudo guardar el recurso")
 	else:
 		print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
-
-	"""
-	var new_resource = Resource.new()
-	var save_result = ResourceSaver.save(new_resource, saveCaseResourcePath)
-	if save_result != OK:
-		print(save_result)
-	"""
