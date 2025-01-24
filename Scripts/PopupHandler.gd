@@ -22,6 +22,8 @@ func _ready() -> void:
 func OpenPopup(newIndex: int) -> void:
 	upgradeUI(newIndex)
 	self.visible = true
+	await get_tree().create_timer(1.5).timeout
+	FadeInAnimation()
 
 func upgradeUI(index: int)->void:
 	title.text = evidences.evidenceDB[index].title
