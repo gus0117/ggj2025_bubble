@@ -4,14 +4,21 @@
 
 [resource]
 script = ExtResource("1_08m1a")
+titulo = ""
 nombre = "Fran Ivan"
 edad = 27
 pacienciaActual = 0.0
 cuartada = "Estaba en el baño"
 urlPrueba1 = "ticket"
+p1_debil = "Texto p1 debil"
+p1_incompleta = "Texto p1 incompleto"
+p1_completa = "Texto p1 completo"
 urlPrueba2 = "foto"
+p2_debil = "Texto p2 debil"
+p2_incompleta = "Texto p2 incompleto"
+p2_completa = "Texto p2 completa"
 urlPrueba3 = "mancha_ropa"
+p3_debil = "Texto p3 debil"
+p3_incompleta = "Texto p3 incompleto"
+p3_completa = "Texto p3 completo"
 esVerdad = false
-debil = ""
-incompleta = ""
-completa = ""
