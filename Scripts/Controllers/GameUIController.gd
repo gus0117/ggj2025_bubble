@@ -16,6 +16,9 @@ var evidenciaActual: int #Indice que va de 1 a 3, sirve para gestionar las evide
 @onready var img_evidencia_3: TextureRect = $BurbujaEvidencia3/ImgEvidencia3
 @onready var popup: PopupHandler = $PopUp
 
+#Enums
+enum TextureType {ICON, EVIDENCE}
+
 func _ready() -> void:
 	InitCase()
 
@@ -33,7 +36,7 @@ func UpdateCoartada() -> void:
 func UpdateBubbles() -> void:
 	if evidenciaActual > 3: # Solo hay 3 evidencias por personaje
 		return
-	var path : String = GetNewEvidencePath()
+	var path : String = GetNewEvidencePath(TextureType.ICON)
 	img_evidencia_1.texture = load(path)
 	img_evidencia_2.texture = load(path)
 	img_evidencia_3.texture = load(path)
@@ -63,8 +66,13 @@ func GetNewDescription() -> String:
 			description = casoActual.p3_debil
 	return description
 
-func GetNewEvidencePath() -> String:
+func GetNewEvidencePath(type: TextureType) -> String:
 	var path: String = "res://Assets/Evidence/"
+	match type:
+		TextureType.ICON:
+			path += "Iconos/icono_"
+		TextureType.EVIDENCE:
+			path += "E_"
 	if evidenciaActual == 1:
 		path += casoActual.urlPrueba1
 	elif evidenciaActual == 2:
@@ -91,21 +99,21 @@ func GetNewEvidenceTitle() -> String:
 
 func _on_burbuja_evidencia_1_pressed() -> void:
 	# Abrir el popup
-	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
+	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath(TextureType.EVIDENCE))
 	# Emitir señal de burbuja seleccionada
 	on_normal_bubble.emit()
 
 
 func _on_burbuja_evidencia_2_pressed() -> void:
 	# Abrir el popup
-	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
+	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath(TextureType.EVIDENCE))
 	# Emitir señal de burbuja seleccionada
 	on_angry_bubble.emit()
 
 
 func _on_burbuja_evidencia_3_pressed() -> void:
 	# Abrir el popup
-	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
+	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath(TextureType.EVIDENCE))
 	# Emitir señal de burbuja seleccionada
 	on_relax_bubble.emit()
 
