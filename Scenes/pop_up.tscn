@@ -1,24 +1,29 @@
-[gd_scene load_steps=16 format=3 uid="uid://ntlogw2ntig0"]
+[gd_scene load_steps=21 format=3 uid="uid://ntlogw2ntig0"]
 
 [ext_resource type="Texture2D" uid="uid://6dx0ssxlmd35" path="res://Assets/Popup_test/ticket.jpg" id="1_t8vy3"]
 [ext_resource type="Script" path="res://Scripts/PopupHandler.gd" id="1_y7fme"]
 [ext_resource type="Resource" uid="uid://b5h1mneabwqmb" path="res://Resources/evidenceDB.tres" id="2_8a13u"]
 [ext_resource type="Shader" path="res://Shaders/gaussian_blur.gdshader" id="2_yoaxc"]
+[ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="3_qwf2d"]
+[ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="4_ivxp0"]
+[ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="7_7q2g0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2jvi"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ig45"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cd2g"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkp5h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt3ej"]
+atlas = ExtResource("3_qwf2d")
+region = Rect2(15, 256, 18, 16)
 
 [sub_resource type="LabelSettings" id="LabelSettings_besme"]
-font_size = 26
+font = ExtResource("4_ivxp0")
+font_size = 25
+font_color = Color(0.277528, 0.277528, 0.277528, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1wph"]
+atlas = ExtResource("3_qwf2d")
+region = Rect2(256, 128, 48, 48)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oyygm"]
 shader = ExtResource("2_yoaxc")
@@ -32,18 +37,34 @@ shader_parameter/blur_strength = 0.1
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kgij"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b00bk"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 5.0
 bg_color = Color(0.731823, 0.375544, 0.0861287, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+expand_margin_left = 12.0
+expand_margin_top = 5.0
+expand_margin_right = 12.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uxs8"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 5.0
 bg_color = Color(0.47451, 0.231373, 0.0352941, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+expand_margin_left = 12.0
+expand_margin_top = 5.0
+expand_margin_right = 12.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_401ih"]
 content_margin_left = 20.0
@@ -55,6 +76,10 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+expand_margin_left = 12.0
+expand_margin_top = 5.0
+expand_margin_right = 12.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="Animation" id="Animation_h4van"]
 resource_name = "FadeIn"
@@ -142,12 +167,14 @@ _data = {
 }
 
 [node name="PopUp" type="Control"]
+process_mode = 2
+process_priority = 1
 layout_mode = 3
 anchor_left = 0.316
 anchor_right = 0.759
 anchor_bottom = 1.0
-offset_left = -0.0320129
-offset_right = -0.368042
+offset_left = -1.03201
+offset_right = -1.36804
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y7fme")
@@ -160,7 +187,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_g2jvi")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5ig45")
 
 [node name="Header" type="Panel" parent="Panel"]
 layout_mode = 1
@@ -170,7 +197,19 @@ anchor_bottom = 0.102
 offset_right = 6.10352e-05
 offset_bottom = -0.0960007
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2cd2g")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pkp5h")
+
+[node name="HeaderBackground" type="TextureRect" parent="Panel/Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 3.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_tt3ej")
 
 [node name="Title" type="Label" parent="Panel/Header"]
 layout_mode = 1
@@ -196,6 +235,19 @@ offset_bottom = 0.167969
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background" type="TextureRect" parent="Panel/Body"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -6.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_e1wph")
+expand_mode = 1
+stretch_mode = 1
+
 [node name="EvidenceImg" type="TextureRect" parent="Panel/Body"]
 layout_mode = 1
 anchors_preset = 8
@@ -204,9 +256,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -106.0
-offset_top = -227.5
+offset_top = -227.0
 offset_right = 108.0
-offset_bottom = 231.5
+offset_bottom = 218.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_t8vy3")
@@ -236,6 +288,8 @@ theme_override_constants/margin_bottom = 10
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/Body/Blur/Description"]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("7_7q2g0")
+theme_override_fonts/bold_font = ExtResource("7_7q2g0")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
@@ -247,10 +301,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -29.0
-offset_top = -55.0
-offset_right = 29.0
-offset_bottom = -24.0
+offset_left = -51.0
+offset_top = -96.0
+offset_right = 51.0
+offset_bottom = -58.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20

@@ -15,7 +15,8 @@ class_name PopupHandler
 @export var evidences: EvidenceDB
 
 func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -> void:
-	title.text = newTitle
+	get_tree().paused = true
+	title.text = "Evidencia: " + newTitle
 	evidence_img.texture = load(evidencePath)
 	description.text = newDescription
 	self.visible = true
@@ -23,7 +24,9 @@ func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -
 	FadeInAnimation()
 
 func ClosePopup() -> void:
+	get_tree().paused = false
 	visible = false
+	animation_player.stop()
 
 func FadeInAnimation() -> void:
 	animation_player.play("FadeIn")

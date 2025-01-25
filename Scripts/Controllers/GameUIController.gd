@@ -11,6 +11,11 @@ var evidenciaActual: int
 @onready var img_evidencia_3: TextureRect = $BurbujaEvidencia3/ImgEvidencia3
 @onready var popup: PopupHandler = $PopUp
 
+func _ready() -> void:
+	InitCase()
+
+func InitCase() -> void:
+	evidenciaActual = 1
 
 func UpdateUI(nuevoCaso: Caso) -> void:
 	casoActual = nuevoCaso
@@ -26,7 +31,7 @@ func UpdateBubbles() -> void:
 	img_evidencia_2.texture = load(path)
 	img_evidencia_3.texture = load(path)
 
-func GetDescription() -> String:
+func GetNewDescription() -> String:
 	var description: String
 	if evidenciaActual == 1:
 		if casoActual.pacienciaActual < 0.3:
@@ -51,7 +56,7 @@ func GetDescription() -> String:
 			description = casoActual.p3_debil
 	return description
 
-func GetEvidencePath() -> String:
+func GetNewEvidencePath() -> String:
 	var path: String = "res://Assets/Evidence/"
 	if evidenciaActual == 1:
 		path += casoActual.urlPrueba1
@@ -61,8 +66,23 @@ func GetEvidencePath() -> String:
 		path += casoActual.urlPrueba3
 	return path+".png"
 
+func GetNewEvidenceTitle() -> String:
+	var title:= ""
+	if evidenciaActual == 1:
+		title = casoActual.urlPrueba1
+	elif evidenciaActual == 2:
+		title = casoActual.urlPrueba2
+	elif evidenciaActual == 3:
+		title += casoActual.urlPrueba3
+	return title
+
+
 func _on_burbuja_evidencia_1_pressed() -> void:
 	#Normal
+	print(GetNewEvidenceTitle())
+	print(GetNewDescription())
+	print(GetNewEvidencePath())
+	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
 	pass
 
 
