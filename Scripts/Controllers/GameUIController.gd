@@ -31,7 +31,7 @@ func UpdateCoartada() -> void:
 	coartada_rich_text.text = casoActual.coartada
 
 func UpdateBubbles() -> void:
-	var path : String = "res://Assets/Evidence/"+casoActual.urlPrueba1+".png"
+	var path : String = GetNewEvidencePath()
 	img_evidencia_1.texture = load(path)
 	img_evidencia_2.texture = load(path)
 	img_evidencia_3.texture = load(path)
@@ -71,6 +71,11 @@ func GetNewEvidencePath() -> String:
 		path += casoActual.urlPrueba3
 	return path+".png"
 
+func IncreseEvidenceIndex() -> void:
+	evidenciaActual += 1
+	if evidenciaActual > 3:
+		print("Siguiente nivel")
+
 func GetNewEvidenceTitle() -> String:
 	var title:= ""
 	if evidenciaActual == 1:
@@ -85,7 +90,6 @@ func GetNewEvidenceTitle() -> String:
 func _on_burbuja_evidencia_1_pressed() -> void:
 	# Abrir el popup
 	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
-	# Aumentar el indice para pasar a otra evidencia
 	# Emitir señal de burbuja seleccionada
 	on_normal_bubble.emit()
 
@@ -93,7 +97,6 @@ func _on_burbuja_evidencia_1_pressed() -> void:
 func _on_burbuja_evidencia_2_pressed() -> void:
 	# Abrir el popup
 	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
-	# Aumentar el indice para pasar a otra evidencia
 	# Emitir señal de burbuja seleccionada
 	on_angry_bubble.emit()
 
@@ -101,6 +104,12 @@ func _on_burbuja_evidencia_2_pressed() -> void:
 func _on_burbuja_evidencia_3_pressed() -> void:
 	# Abrir el popup
 	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
-	# Aumentar el indice para pasar a otra evidencia
 	# Emitir señal de burbuja seleccionada
 	on_relax_bubble.emit()
+
+
+func _on_close_popup() -> void:
+	# Aumentar el indice para pasar a otra evidencia
+	IncreseEvidenceIndex()
+	# Actualiza las burbujas
+	UpdateBubbles()
