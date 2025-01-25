@@ -5,7 +5,7 @@ class_name Pacientometro
 @export var colorNormal : Color
 @export var colorImaciente: Color
 @export var colorEnojado: Color
-var styleBox:= StyleBoxFlat.new()
+@export var styleBox: StyleBoxFlat
 
 func updatePacientometro(value: float) -> void:
 	self.value = value

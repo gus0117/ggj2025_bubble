@@ -1,16 +1,25 @@
-[gd_scene load_steps=11 format=3 uid="uid://tg433ahge1et"]
+[gd_scene load_steps=12 format=3 uid="uid://tg433ahge1et"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/GameController.gd" id="1_2xqlm"]
 [ext_resource type="Texture2D" uid="uid://by340ky8at0q5" path="res://Assets/Sospechosos/default_char.png" id="1_k3srg"]
 [ext_resource type="PackedScene" uid="uid://cuxm13nayotxw" path="res://Scenes/game.tscn" id="1_vyxb3"]
 [ext_resource type="Resource" uid="uid://eyp8yi6ififr" path="res://Resources/Casos/CasosDB.tres" id="2_lfcr7"]
 [ext_resource type="Script" path="res://Scripts/pacientometro.gd" id="4_7dumn"]
+[ext_resource type="StyleBox" uid="uid://vjduxy04j0bw" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eenr2"]
 bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5kel"]
 bg_color = Color(1, 0.330927, 0.367176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="Animation" id="Animation_6m5ns"]
 resource_name = "Nervioso"
@@ -60,11 +69,14 @@ db = ExtResource("2_lfcr7")
 
 [node name="Indicador" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchor_left = 0.923
-anchor_right = 1.0
-anchor_bottom = 0.275
-offset_left = -0.296021
-offset_bottom = -0.199997
+anchor_left = 0.915
+anchor_top = 0.014
+anchor_right = 0.992
+anchor_bottom = 0.289
+offset_left = -0.0800781
+offset_top = -0.0720005
+offset_right = 0.215942
+offset_bottom = -0.272003
 grow_horizontal = 0
 
 [node name="Pacientometro" type="ProgressBar" parent="CanvasLayer/Indicador"]
@@ -87,6 +99,7 @@ colorPaciente = Color(0, 0.730016, 9.62615e-07, 1)
 colorNormal = Color(0.880472, 0.880472, 0, 1)
 colorImaciente = Color(0.854458, 0.490768, 1.15514e-06, 1)
 colorEnojado = Color(1, 0, 0, 1)
+styleBox = ExtResource("5_t8bru")
 
 [node name="LimInferior" type="Label" parent="CanvasLayer/Indicador"]
 layout_mode = 1
