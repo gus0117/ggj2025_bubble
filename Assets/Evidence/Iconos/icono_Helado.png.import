@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xrsgsby8vtwi"
-path="res://.godot/imported/Mochila.png-94959738d0149e59c9bc6893a8186e35.ctex"
+uid="uid://bfq8r0qugy6im"
+path="res://.godot/imported/icono_Helado.png-d2fad56f97a52f6a4bbd5a59747aa862.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Mochila.png"
-dest_files=["res://.godot/imported/Mochila.png-94959738d0149e59c9bc6893a8186e35.ctex"]
+source_file="res://Assets/Evidence/Iconos/icono_Helado.png"
+dest_files=["res://.godot/imported/icono_Helado.png-d2fad56f97a52f6a4bbd5a59747aa862.ctex"]
 
 [params]
 

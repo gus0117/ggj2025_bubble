@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c351m2v4hfmd3"
-path="res://.godot/imported/Cuchara.png-0fe0307a48d8ae87fa297119810efec5.ctex"
+uid="uid://b5guwufixtvx1"
+path="res://.godot/imported/E_Tarjeta.png-2fa37b2db32fa5061327a3c03cf9537f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Cuchara.png"
-dest_files=["res://.godot/imported/Cuchara.png-0fe0307a48d8ae87fa297119810efec5.ctex"]
+source_file="res://Assets/Evidence/E_Tarjeta.png"
+dest_files=["res://.godot/imported/E_Tarjeta.png-2fa37b2db32fa5061327a3c03cf9537f.ctex"]
 
 [params]
 

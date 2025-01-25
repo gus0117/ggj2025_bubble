@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgi4uq2bs15ep"
-path="res://.godot/imported/Remera manchada.png-95bbca3f29a175657419b6302ff77c1e.ctex"
+uid="uid://dsrjvgi2hxfss"
+path="res://.godot/imported/E_Reloj.png-144e636d11ecca4cb09faf28bfc928fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Remera manchada.png"
-dest_files=["res://.godot/imported/Remera manchada.png-95bbca3f29a175657419b6302ff77c1e.ctex"]
+source_file="res://Assets/Evidence/E_Reloj.png"
+dest_files=["res://.godot/imported/E_Reloj.png-144e636d11ecca4cb09faf28bfc928fa.ctex"]
 
 [params]
 

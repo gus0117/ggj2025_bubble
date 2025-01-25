@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do5jpuw3mcsxb"
-path="res://.godot/imported/Helado.png-8f0b737c2010d6cb902c6ac568ebda5e.ctex"
+uid="uid://bfiysgl5j2qtd"
+path="res://.godot/imported/E_Maquillaje.png-649ce13a97c14f32ae8bef1f7fec5b73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Helado.png"
-dest_files=["res://.godot/imported/Helado.png-8f0b737c2010d6cb902c6ac568ebda5e.ctex"]
+source_file="res://Assets/Evidence/E_Maquillaje.png"
+dest_files=["res://.godot/imported/E_Maquillaje.png-649ce13a97c14f32ae8bef1f7fec5b73.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvr5ud7vbij77"
-path="res://.godot/imported/Transporte.png-49cb901729330c32034307aaa52c19be.ctex"
+uid="uid://xrsgsby8vtwi"
+path="res://.godot/imported/E_Mochila.png-e522eaf374ae04f1edc945223a2fdde4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Transporte.png"
-dest_files=["res://.godot/imported/Transporte.png-49cb901729330c32034307aaa52c19be.ctex"]
+source_file="res://Assets/Evidence/E_Mochila.png"
+dest_files=["res://.godot/imported/E_Mochila.png-e522eaf374ae04f1edc945223a2fdde4.ctex"]
 
 [params]
 

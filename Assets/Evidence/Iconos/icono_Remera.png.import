@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btt1e2vk7n70r"
-path="res://.godot/imported/Pase_de_entrada.png-8375ab3196e3abd454c639f4c5f0abb8.ctex"
+uid="uid://cv46erl6smi3f"
+path="res://.godot/imported/icono_Remera.png-3245adf393ca6d74559a19371b7533ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/Pase_de_entrada.png"
-dest_files=["res://.godot/imported/Pase_de_entrada.png-8375ab3196e3abd454c639f4c5f0abb8.ctex"]
+source_file="res://Assets/Evidence/Iconos/icono_Remera.png"
+dest_files=["res://.godot/imported/icono_Remera.png-3245adf393ca6d74559a19371b7533ef.ctex"]
 
 [params]
 
