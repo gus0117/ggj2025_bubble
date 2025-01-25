@@ -161,6 +161,7 @@ libraries = {
 }
 
 [node name="TimerPaciencia" type="Timer" parent="Sospechoso"]
+wait_time = 5.0
 
 [connection signal="on_angry_bubble" from="CanvasLayer/Game" to="." method="_on_angry_bubble"]
 [connection signal="on_normal_bubble" from="CanvasLayer/Game" to="." method="_on_normal_bubble"]
