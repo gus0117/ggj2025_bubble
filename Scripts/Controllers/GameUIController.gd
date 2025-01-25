@@ -31,6 +31,8 @@ func UpdateCoartada() -> void:
 	coartada_rich_text.text = casoActual.coartada
 
 func UpdateBubbles() -> void:
+	if evidenciaActual > 3: # Solo hay 3 evidencias por personaje
+		return
 	var path : String = GetNewEvidencePath()
 	img_evidencia_1.texture = load(path)
 	img_evidencia_2.texture = load(path)
