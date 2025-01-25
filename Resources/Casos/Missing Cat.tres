@@ -1,19 +1,19 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://dhdu3xfoobubl"]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_ljwad"]
+[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_jpqtg"]
 
 [resource]
-script = ExtResource("1_ljwad")
+script = ExtResource("1_jpqtg")
 titulo = "Missing Cat"
 nombre = "Martin Flores"
 edad = 39
 pacienciaActual = 0.0
 coartada = "Estaba en mi trabajo como empleado en una empresa, entro temprano salgo tarde."
-urlPrueba1 = "Pase_de_entrada"
+urlPrueba1 = "Tarjeta"
 p1_debil = "Un pase de empresa común."
 p1_incompleta = "Un pase de empresa para poder entrar a las instalaciones con el nombre del sospechoso y su información."
 p1_completa = "Un pase de empresa para entrar con el nombre del sospechoso, su información y su rango en la empresa parece que esta un [b]poco gastado[/b]."
-urlPrueba2 = "Transporte"
+urlPrueba2 = "Boleto"
 p2_debil = "No tiene auto."
 p2_incompleta = "No tiene auto, camina todos los días a la parada para tomar el colectivo."
 p2_completa = "Hay dos boletos de colectivo ya [b]usados[/b] con el número del día en su bolsillo [b]con la fecha del día de hoy[/b]."

@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://blt7xmnepwrxp"]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_7sfq1"]
+[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_kjd2r"]
 
 [resource]
-script = ExtResource("1_7sfq1")
+script = ExtResource("1_kjd2r")
 titulo = "Sabores olvidados"
 nombre = "Juan Jackson "
 edad = 14
@@ -17,7 +17,7 @@ urlPrueba2 = "Helado"
 p2_debil = "Pote de helado sucio."
 p2_incompleta = "Estaba en el tacho de basura, ¿Estará ocultando algo?"
 p2_completa = "El helado que desapareció era de un sabor diferente."
-urlPrueba3 = "Remera manchada"
+urlPrueba3 = "Remera"
 p3_debil = "Remera oculta debajo de la cama."
 p3_incompleta = "La remera tiene manchas sutiles párese de helado."
 p3_completa = "No lavo bien la remera tiene manchas de el mismo helado."

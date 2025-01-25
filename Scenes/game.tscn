@@ -141,14 +141,14 @@ stretch_mode = 0
 [node name="ImgEvidencia1" type="TextureRect" parent="BurbujaEvidencia1"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.319
-anchor_top = 0.27
-anchor_right = 0.609
-anchor_bottom = 0.62
-offset_left = 0.740997
-offset_top = -0.0300026
-offset_right = 0.0509949
-offset_bottom = -0.18
+anchor_left = 0.262
+anchor_top = 0.087
+anchor_right = 0.78
+anchor_bottom = 0.71
+offset_left = -0.041996
+offset_top = -0.00600338
+offset_right = 1.02002
+offset_bottom = -0.980026
 expand_mode = 1
 
 [node name="BurbujaEvidencia2" type="TextureButton" parent="."]
@@ -167,14 +167,14 @@ stretch_mode = 0
 [node name="ImgEvidencia2" type="TextureRect" parent="BurbujaEvidencia2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.293
-anchor_top = 0.217
-anchor_right = 0.609
-anchor_bottom = 0.62
-offset_left = 17.667
-offset_top = 14.166
-offset_right = 3.87099
-offset_bottom = -0.239998
+anchor_left = 0.273
+anchor_top = 0.163
+anchor_right = 0.736
+anchor_bottom = 0.719
+offset_left = 0.0319977
+offset_top = 0.0609989
+offset_right = 0.0239868
+offset_bottom = -0.00700378
 expand_mode = 1
 
 [node name="BurbujaEvidencia3" type="TextureButton" parent="."]
@@ -193,14 +193,14 @@ stretch_mode = 0
 [node name="ImgEvidencia3" type="TextureRect" parent="BurbujaEvidencia3"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.407
-anchor_top = 0.289
-anchor_right = 0.672
-anchor_bottom = 0.621
-offset_left = -0.0629807
-offset_top = 0.0719681
-offset_right = 0.00201416
-offset_bottom = 0.0579605
+anchor_left = 0.263
+anchor_top = 0.112
+anchor_right = 0.742
+anchor_bottom = 0.671
+offset_left = 0.0329971
+offset_top = -0.0240002
+offset_right = -0.0780029
+offset_bottom = 0.00799561
 expand_mode = 1
 
 [node name="PopUp" parent="." instance=ExtResource("15_5l0mh")]

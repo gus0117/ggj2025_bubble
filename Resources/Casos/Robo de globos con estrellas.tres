@@ -1,15 +1,15 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://cr6doc20a6w0n"]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_4faj2"]
+[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_gxir2"]
 
 [resource]
-script = ExtResource("1_4faj2")
+script = ExtResource("1_gxir2")
 titulo = "Robo de globos con estrellas"
 nombre = "Rubén Baltazar López (payaso buble)"
 edad = 25
 pacienciaActual = 0.0
 coartada = "Yo llegué tarde porque me estaba maquillando, además habia mucho tráfico. No se nada de los globos robados."
-urlPrueba1 = "Maquillaje de Payaso"
+urlPrueba1 = "Maquillaje"
 p1_debil = "Es solo maquillaje."
 p1_incompleta = "Es maquillaje de payaso con los colores que siempre uso."
 p1_completa = "Es maquillaje de payaso con los colores que siempre uso… pero sí, lo terminé de aplicar un poco antes de que llegara a la fiesta. No sé cómo pude tardar tanto!"
@@ -17,7 +17,7 @@ urlPrueba2 = "Reloj"
 p2_debil = "Sí, llegué tarde."
 p2_incompleta = "Sí, llegué tarde… había tráfico."
 p2_completa = "Sí, llegué tarde… había tráfico. ¡Pero eso me dio tiempo de inflar algunos globos extra antes de salir de casa!"
-urlPrueba3 = "Mochila"
+urlPrueba3 = "Globos"
 p3_debil = "Sí, yo tenía globos."
 p3_incompleta = "Sí, yo tenía globos. Siempre llevo algunos."
 p3_completa = "Sí, yo tenía globos. Siempre llevo algunos… pero, entre esos globlos hay una cinta que dice feliz cumpleaños tobias al igual que los globos perdidos."
