@@ -13,9 +13,6 @@ signal on_close_popup
 @export var blurPanel: Panel
 @onready var animation_player: AnimationPlayer = $Panel/AnimationPlayer
 
-#Se utiliza un recurso para guardar las imagenes
-@export var evidences: EvidenceDB
-
 func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -> void:
 	get_tree().paused = true
 	title.text = newTitle
