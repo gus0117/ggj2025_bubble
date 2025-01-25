@@ -211,3 +211,4 @@ layout_mode = 1
 [connection signal="pressed" from="BurbujaEvidencia1" to="." method="_on_burbuja_evidencia_1_pressed"]
 [connection signal="pressed" from="BurbujaEvidencia2" to="." method="_on_burbuja_evidencia_2_pressed"]
 [connection signal="pressed" from="BurbujaEvidencia3" to="." method="_on_burbuja_evidencia_3_pressed"]
+[connection signal="on_close_popup" from="PopUp" to="." method="_on_close_popup"]
