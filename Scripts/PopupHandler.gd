@@ -2,13 +2,12 @@ extends Control
 class_name PopupHandler
 
 # Variables component
-@onready var title: Label = $Panel/Header/Title
-@onready var evidence_img: TextureRect = $Panel/Body/EvidenceImg
-@onready var description: RichTextLabel = $Panel/Body/Blur/Description/RichTextLabel
+@export var title: Label
+@export var evidence_img: TextureRect
+@export var description: RichTextLabel
 
 # Effect component
-@onready var blurPanel: Panel = $Panel/Body/Blur
-@onready var descriptionPanel: MarginContainer = $Panel/Body/Blur/Description
+@export var blurPanel: Panel
 @onready var animation_player: AnimationPlayer = $Panel/AnimationPlayer
 
 #Se utiliza un recurso para guardar las imagenes
@@ -16,7 +15,7 @@ class_name PopupHandler
 
 func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -> void:
 	get_tree().paused = true
-	title.text = "Evidencia: " + newTitle
+	title.text = newTitle
 	evidence_img.texture = load(evidencePath)
 	description.text = newDescription
 	self.visible = true
