@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ntlogw2ntig0"]
+[gd_scene load_steps=24 format=3 uid="uid://ntlogw2ntig0"]
 
 [ext_resource type="Script" path="res://Scripts/PopupHandler.gd" id="1_y7fme"]
 [ext_resource type="Shader" path="res://Shaders/gaussian_blur.gdshader" id="2_yoaxc"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="4_ivxp0"]
 [ext_resource type="Texture2D" uid="uid://by7yevm60tkn3" path="res://Assets/Popup/Carpetin2.png" id="5_6prri"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="7_7q2g0"]
+[ext_resource type="FontFile" uid="uid://dovvjrgu4g06e" path="res://Assets/Fonts/veteran typewriter.ttf" id="7_jr15u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ig45"]
 
@@ -381,8 +382,8 @@ offset_right = 0.161987
 offset_bottom = 0.00704956
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/normal_font = ExtResource("7_7q2g0")
-theme_override_fonts/bold_font = ExtResource("7_7q2g0")
+theme_override_fonts/normal_font = ExtResource("7_jr15u")
+theme_override_fonts/bold_font = ExtResource("7_jr15u")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true

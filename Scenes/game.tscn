@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=19 format=3 uid="uid://cuxm13nayotxw"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/GameUIController.gd" id="1_1g15q"]
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="1_jl76l"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="2_e6ymw"]
 [ext_resource type="Texture2D" uid="uid://btj7ngenshygn" path="res://Assets/UI/14 Border 03.png" id="2_s3yyx"]
 [ext_resource type="Texture2D" uid="uid://cnbdyd11nip2e" path="res://Assets/Bubbles/Normal/BubbleText1.png" id="4_uxpx0"]
+[ext_resource type="FontFile" uid="uid://dovvjrgu4g06e" path="res://Assets/Fonts/veteran typewriter.ttf" id="6_0mtms"]
 [ext_resource type="Texture2D" uid="uid://cyhnsc7jp6rre" path="res://Assets/Bubbles/Normal/BubbleText2.png" id="6_cuctb"]
 [ext_resource type="Texture2D" uid="uid://bddkittui7y5y" path="res://Assets/Bubbles/Pressed/BubbleText1Pressed.png" id="6_muka7"]
 [ext_resource type="Texture2D" uid="uid://b31xv87an45yh" path="res://Assets/Bubbles/Hover/BubbleText1Hover.png" id="7_g2g8i"]
@@ -44,7 +45,6 @@ grow_vertical = 2
 script = ExtResource("1_1g15q")
 
 [node name="Titulocaso" type="Label" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -64,14 +64,13 @@ horizontal_alignment = 1
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.035
-anchor_top = 0.702
-anchor_right = 0.964
-anchor_bottom = 0.98
-offset_left = 39.32
-offset_top = 17.104
-offset_right = 41.472
-offset_bottom = 13.96
+anchor_left = -0.001
+anchor_top = 0.728
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.152
+offset_top = 0.256012
+offset_bottom = 1.00006
 theme_override_styles/panel = SubResource("StyleBoxTexture_ti5u0")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -99,7 +98,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_e6ymw")
+theme_override_fonts/normal_font = ExtResource("6_0mtms")
 theme_override_font_sizes/normal_font_size = 20
 text = "Aqui va la coartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd v oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd
 as
