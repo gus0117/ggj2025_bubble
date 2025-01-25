@@ -1,7 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://ntlogw2ntig0"]
+[gd_scene load_steps=23 format=3 uid="uid://ntlogw2ntig0"]
 
 [ext_resource type="Script" path="res://Scripts/PopupHandler.gd" id="1_y7fme"]
-[ext_resource type="Resource" uid="uid://b5h1mneabwqmb" path="res://Resources/evidenceDB.tres" id="2_8a13u"]
 [ext_resource type="Shader" path="res://Shaders/gaussian_blur.gdshader" id="2_yoaxc"]
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="3_qwf2d"]
 [ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="4_ivxp0"]
@@ -241,7 +240,6 @@ title = NodePath("Panel/Body/Title")
 evidence_img = NodePath("Panel/Body/EvidenceImg")
 description = NodePath("Panel/Body/Description")
 blurPanel = NodePath("Panel/Body/Blur")
-evidences = ExtResource("2_8a13u")
 
 [node name="Background" type="TextureRect" parent="."]
 modulate = Color(0.800491, 0.800491, 0.800491, 1)
@@ -353,12 +351,15 @@ grow_vertical = 2
 [node name="Title" type="Label" parent="Panel/Body"]
 visible = false
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -3.5
-offset_right = -2.5
-offset_bottom = 27.0
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.037
+anchor_right = 0.998
+anchor_bottom = 0.09
+offset_left = 0.172
+offset_top = 0.0190029
+offset_right = -0.0859985
+offset_bottom = -0.169998
 grow_horizontal = 2
 text = "Título"
 label_settings = SubResource("LabelSettings_yrgt5")
@@ -368,11 +369,18 @@ autowrap_mode = 2
 
 [node name="Description" type="RichTextLabel" parent="Panel/Body"]
 visible = false
-layout_mode = 2
-offset_left = 30.0
-offset_top = 29.0
-offset_right = 427.0
-offset_bottom = 503.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.152
+anchor_right = 0.934
+anchor_bottom = 0.961
+offset_left = -0.162001
+offset_top = 0.0240021
+offset_right = 0.161987
+offset_bottom = 0.00704956
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_7q2g0")
 theme_override_fonts/bold_font = ExtResource("7_7q2g0")
 theme_override_font_sizes/normal_font_size = 20
