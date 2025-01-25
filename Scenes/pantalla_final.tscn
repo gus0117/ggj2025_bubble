@@ -1,0 +1,114 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsr0exsyuu0oc"]
+
+[ext_resource type="Texture2D" uid="uid://cnbdyd11nip2e" path="res://Assets/Bubbles/Normal/BubbleText1.png" id="1_x14p2"]
+
+[sub_resource type="Animation" id="Animation_0h6wb"]
+resource_name = "FadeIn"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k6gbf"]
+_data = {
+"FadeIn": SubResource("Animation_0h6wb")
+}
+
+[node name="PantallaFinal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.12103, 0.12103, 0.12103, 1)
+
+[node name="Dialogo1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 176.0
+offset_top = -42.0
+offset_right = 593.0
+offset_bottom = 242.0
+rotation = 0.261799
+texture = ExtResource("1_x14p2")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogo1"]
+libraries = {
+"": SubResource("AnimationLibrary_k6gbf")
+}
+
+[node name="Label" type="Label" parent="Dialogo1"]
+layout_mode = 0
+offset_left = 71.5764
+offset_top = 116.442
+offset_right = 357.576
+offset_bottom = 151.442
+rotation = -0.0925025
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "¿Tu que crees, Bubbles?"
+horizontal_alignment = 1
+
+[node name="Dialogo2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 619.0
+offset_top = 201.0
+offset_right = 1036.0
+offset_bottom = 485.0
+rotation = -0.261799
+texture = ExtResource("1_x14p2")
+expand_mode = 1
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogo2"]
+libraries = {
+"": SubResource("AnimationLibrary_k6gbf")
+}
+
+[node name="Label" type="Label" parent="Dialogo2"]
+layout_mode = 0
+offset_left = 65.6594
+offset_top = 91.098
+offset_right = 349.659
+offset_bottom = 154.098
+rotation = 0.0925025
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "¿Crees que es culpable?"
+horizontal_alignment = 1
+
+[node name="Dialogo3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 266.0
+offset_right = 668.0
+offset_bottom = 550.0
+rotation = 0.261799
+texture = ExtResource("1_x14p2")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogo3"]
+libraries = {
+"": SubResource("AnimationLibrary_k6gbf")
+}
+
+[node name="Label" type="Label" parent="Dialogo3"]
+layout_mode = 0
+offset_left = -8.66476
+offset_top = 133.802
+offset_right = 431.335
+offset_bottom = 176.802
+rotation = -0.0925025
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "¿Deberíamos ponerlo tras las rejas?"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 516.0
+offset_right = 342.0
+offset_bottom = 556.0
