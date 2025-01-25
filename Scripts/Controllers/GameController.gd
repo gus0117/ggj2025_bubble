@@ -8,6 +8,7 @@ class_name GameController
 @onready var gameui: GameUIController = $CanvasLayer/Game
 @onready var timer_paciencia: Timer = $Sospechoso/TimerPaciencia
 @onready var pacientometro: Pacientometro = $CanvasLayer/Indicador/Pacientometro
+@onready var animation_player: AnimationPlayer = $Sospechoso/AnimationPlayer
 
 #Variables
 var casoActual : Caso
@@ -34,12 +35,25 @@ func updateCharacter():
 
 func UpdatePaciencia(value: float) -> void:
 	casoActual.pacienciaActual += value
+	
 	if casoActual.pacienciaActual < 0:
 		casoActual.pacienciaActual = 0
 	elif casoActual.pacienciaActual > 1:
 		casoActual.pacienciaActual = 1
+		
+	#Animacion Nerviosa
+	if casoActual.pacienciaActual > 0.7:
+		#Color naranja
+		animation_player.play("Nervioso")
+	else:
+		if animation_player.is_playing():
+			animation_player.stop()
 	#Actualizacion visual
 	pacientometro.updatePacientometro(casoActual.pacienciaActual)
+	if casoActual.pacienciaActual >= 1:
+		timer_paciencia.stop()
+		#Desencadenar final
+		FinishInterview()
 	
 
 func GetPacienceByAge(age: int, e: Emotion) -> float:
@@ -56,12 +70,12 @@ func GetPacienceByAge(age: int, e: Emotion) -> float:
 			if age < 18:
 				pacience = 0.1
 			elif age >= 18 and age < 30:
-				pacience = 0.3
+				pacience = 0.1
 			else:
-				pacience = 0.2
+				pacience = 0.3
 		Emotion.RELAX:
 			if age < 18:
-				pacience = 0.4
+				pacience = 0.3
 			elif age >= 18 and age < 30:
 				pacience = 0.1
 			else:
@@ -73,19 +87,15 @@ func FinishInterview() -> void:
 
 func _on_timer_paciencia_timeout() -> void:
 	UpdatePaciencia(0.1)
-	if casoActual.pacienciaActual >= 1:
-		timer_paciencia.stop()
-		#Desencadenar final
-		FinishInterview()
 
 func _on_normal_bubble() -> void:
 	var impatience = GetPacienceByAge(casoActual.edad, Emotion.NORMAL)
-	pacientometro.updatePacientometro(-impatience) #disminuye la impaciencia
+	UpdatePaciencia(-impatience) #disminuye la impaciencia
 
 func _on_angry_bubble() -> void:
 	var impatience = GetPacienceByAge(casoActual.edad, Emotion.ANGRY)
-	pacientometro.updatePacientometro(-impatience) #disminuye la impaciencia
+	UpdatePaciencia(-impatience) #disminuye la impaciencia
 
 func _on_relax_bubble() -> void:
 	var impatience = GetPacienceByAge(casoActual.edad, Emotion.RELAX)
-	pacientometro.updatePacientometro(-impatience) #disminuye la impaciencia
+	UpdatePaciencia(-impatience) #disminuye la impaciencia
