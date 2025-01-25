@@ -1,6 +1,9 @@
 extends Control
 class_name PopupHandler
 
+# Signal popup
+signal on_close_popup
+
 # Variables component
 @export var title: Label
 @export var evidence_img: TextureRect
@@ -25,6 +28,7 @@ func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -
 func ClosePopup() -> void:
 	get_tree().paused = false
 	visible = false
+	on_close_popup.emit()
 	animation_player.stop()
 
 func FadeInAnimation() -> void:
