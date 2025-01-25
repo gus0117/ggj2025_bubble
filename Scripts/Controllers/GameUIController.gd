@@ -15,6 +15,7 @@ var evidenciaActual: int #Indice que va de 1 a 3, sirve para gestionar las evide
 @onready var img_evidencia_2: TextureRect = $BurbujaEvidencia2/ImgEvidencia2
 @onready var img_evidencia_3: TextureRect = $BurbujaEvidencia3/ImgEvidencia3
 @onready var popup: PopupHandler = $PopUp
+@onready var titulocaso: Label = $Titulocaso
 
 #Enums
 enum TextureType {ICON, EVIDENCE}
@@ -31,6 +32,7 @@ func UpdateUI(nuevoCaso: Caso) -> void:
 	UpdateBubbles()
 
 func UpdateCoartada() -> void:
+	titulocaso.text = casoActual.titulo
 	coartada_rich_text.text = casoActual.coartada
 
 func UpdateBubbles() -> void:
