@@ -1,6 +1,5 @@
-[gd_scene load_steps=25 format=3 uid="uid://ntlogw2ntig0"]
+[gd_scene load_steps=24 format=3 uid="uid://ntlogw2ntig0"]
 
-[ext_resource type="Texture2D" uid="uid://6dx0ssxlmd35" path="res://Assets/Popup_test/ticket.jpg" id="1_t8vy3"]
 [ext_resource type="Script" path="res://Scripts/PopupHandler.gd" id="1_y7fme"]
 [ext_resource type="Resource" uid="uid://b5h1mneabwqmb" path="res://Resources/evidenceDB.tres" id="2_8a13u"]
 [ext_resource type="Shader" path="res://Shaders/gaussian_blur.gdshader" id="2_yoaxc"]
@@ -323,18 +322,17 @@ grow_vertical = 2
 
 [node name="EvidenceImg" type="TextureRect" parent="Panel/Body"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -106.0
-offset_top = -227.0
-offset_right = 108.0
-offset_bottom = 218.0
+anchors_preset = -1
+anchor_left = 0.254
+anchor_top = 0.273
+anchor_right = 0.744
+anchor_bottom = 0.756
+offset_left = -0.0780029
+offset_top = -0.0489807
+offset_right = -0.00799561
+offset_bottom = 0.172028
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_t8vy3")
 expand_mode = 1
 
 [node name="Blur" type="Panel" parent="Panel/Body"]
