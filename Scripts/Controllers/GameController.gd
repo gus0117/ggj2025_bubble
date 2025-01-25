@@ -16,6 +16,9 @@ var casoIndice : int = 0
 #default
 var defaultSprite = preload("res://Assets/Sospechosos/default_char.png")
 
+#Enums
+enum Emotion {NORMAL, ANGRY, RELAX}
+
 func _ready() -> void:
 	if db != null:
 		casoActual = db.casos[casoIndice]
@@ -39,8 +42,50 @@ func UpdatePaciencia(value: float) -> void:
 	pacientometro.updatePacientometro(casoActual.pacienciaActual)
 	
 
+func GetPacienceByAge(age: int, e: Emotion) -> float:
+	var pacience: float = 0
+	match e:
+		Emotion.NORMAL:
+			if age < 18:
+				pacience = 0.3
+			elif age >= 18 and age < 30:
+				pacience = 0.2
+			else:
+				pacience = 0.1
+		Emotion.ANGRY:
+			if age < 18:
+				pacience = 0.1
+			elif age >= 18 and age < 30:
+				pacience = 0.3
+			else:
+				pacience = 0.2
+		Emotion.RELAX:
+			if age < 18:
+				pacience = 0.4
+			elif age >= 18 and age < 30:
+				pacience = 0.1
+			else:
+				pacience = 0
+	return pacience
+
+func FinishInterview() -> void:
+	pass
 
 func _on_timer_paciencia_timeout() -> void:
 	UpdatePaciencia(0.1)
 	if casoActual.pacienciaActual >= 1:
 		timer_paciencia.stop()
+		#Desencadenar final
+		FinishInterview()
+
+func _on_normal_bubble() -> void:
+	var impatience = GetPacienceByAge(casoActual.edad, Emotion.NORMAL)
+	pacientometro.updatePacientometro(-impatience) #disminuye la impaciencia
+
+func _on_angry_bubble() -> void:
+	var impatience = GetPacienceByAge(casoActual.edad, Emotion.ANGRY)
+	pacientometro.updatePacientometro(-impatience) #disminuye la impaciencia
+
+func _on_relax_bubble() -> void:
+	var impatience = GetPacienceByAge(casoActual.edad, Emotion.RELAX)
+	pacientometro.updatePacientometro(-impatience) #disminuye la impaciencia

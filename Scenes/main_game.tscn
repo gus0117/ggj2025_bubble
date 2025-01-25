@@ -162,4 +162,7 @@ libraries = {
 
 [node name="TimerPaciencia" type="Timer" parent="Sospechoso"]
 
+[connection signal="on_angry_bubble" from="CanvasLayer/Game" to="." method="_on_angry_bubble"]
+[connection signal="on_normal_bubble" from="CanvasLayer/Game" to="." method="_on_normal_bubble"]
+[connection signal="on_relax_bubble" from="CanvasLayer/Game" to="." method="_on_relax_bubble"]
 [connection signal="timeout" from="Sospechoso/TimerPaciencia" to="." method="_on_timer_paciencia_timeout"]

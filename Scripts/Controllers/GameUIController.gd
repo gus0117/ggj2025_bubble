@@ -1,8 +1,13 @@
 extends Control
 class_name GameUIController
 
+#Signals para las burbujas
+signal on_normal_bubble
+signal on_angry_bubble
+signal on_relax_bubble
+
 var casoActual: Caso
-var evidenciaActual: int
+var evidenciaActual: int #Indice que va de 1 a 3, sirve para gestionar las evidencias
 
 #Scenes references
 @onready var coartada_rich_text: RichTextLabel = $PanelContainer/VBoxContainer/CoartadaRichText
@@ -78,19 +83,24 @@ func GetNewEvidenceTitle() -> String:
 
 
 func _on_burbuja_evidencia_1_pressed() -> void:
-	#Normal
-	print(GetNewEvidenceTitle())
-	print(GetNewDescription())
-	print(GetNewEvidencePath())
+	# Abrir el popup
 	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
-	pass
+	# Aumentar el indice para pasar a otra evidencia
+	# Emitir señal de burbuja seleccionada
+	on_normal_bubble.emit()
 
 
 func _on_burbuja_evidencia_2_pressed() -> void:
-	#Enojado
-	pass # Replace with function body.
+	# Abrir el popup
+	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
+	# Aumentar el indice para pasar a otra evidencia
+	# Emitir señal de burbuja seleccionada
+	on_angry_bubble.emit()
 
 
 func _on_burbuja_evidencia_3_pressed() -> void:
-	#Relax
-	pass # Replace with function body.
+	# Abrir el popup
+	popup.OpenPopup(GetNewEvidenceTitle(), GetNewDescription(), GetNewEvidencePath())
+	# Aumentar el indice para pasar a otra evidencia
+	# Emitir señal de burbuja seleccionada
+	on_relax_bubble.emit()
