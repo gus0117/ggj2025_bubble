@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h0ogexajubq1"
-path="res://.godot/imported/pantalla_carga_caso_gato.jpg-fa085f2ba500de2c82f0c8c9c94b3a9d.ctex"
+uid="uid://dgybglojx7lua"
+path="res://.godot/imported/Missing Cat.png-0fae819b60cefa83e4892292962c67bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pantalla_carga_caso_gato.jpg"
-dest_files=["res://.godot/imported/pantalla_carga_caso_gato.jpg-fa085f2ba500de2c82f0c8c9c94b3a9d.ctex"]
+source_file="res://Assets/LoadingScreen/Missing Cat.png"
+dest_files=["res://.godot/imported/Missing Cat.png-0fae819b60cefa83e4892292962c67bc.ctex"]
 
 [params]
 
