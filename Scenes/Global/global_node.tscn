@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0wtmeawh08uu"]
+
+[ext_resource type="Script" path="res://Scripts/Globals/Global.gd" id="1_g33nd"]
+[ext_resource type="Resource" uid="uid://cajej7qwgqsxh" path="res://Resources/Casos/CasosDB.tres" id="2_8q3wg"]
+
+[node name="GlobalNode" type="Node"]
+script = ExtResource("1_g33nd")
+db = ExtResource("2_8q3wg")
