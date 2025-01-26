@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://tg433ahge1et"]
+[gd_scene load_steps=16 format=3 uid="uid://tg433ahge1et"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/GameController.gd" id="1_2xqlm"]
 [ext_resource type="Texture2D" uid="uid://by340ky8at0q5" path="res://Assets/Sospechosos/default_char.png" id="1_k3srg"]
@@ -8,6 +8,9 @@
 [ext_resource type="StyleBox" uid="uid://bn20xqt2s461w" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
 [ext_resource type="Texture2D" uid="uid://bdesnety1momn" path="res://Assets/Nivel/fondofinal.png" id="6_kjym8"]
 [ext_resource type="PackedScene" uid="uid://dkcdyxo1wypjs" path="res://Scenes/feedback.tscn" id="7_kmbn3"]
+[ext_resource type="Texture2D" uid="uid://bvqxf3vonprwi" path="res://Assets/Pacientometro/feliz.png" id="8_jihih"]
+[ext_resource type="Texture2D" uid="uid://byilg6t02m24p" path="res://Assets/Pacientometro/poker.png" id="9_1y088"]
+[ext_resource type="Texture2D" uid="uid://gmldm1yr0sfk" path="res://Assets/Pacientometro/enojado.png" id="10_qk0fy"]
 
 [sub_resource type="Animation" id="Animation_sx1xx"]
 resource_name = "Temblar"
@@ -33,6 +36,10 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eenr2"]
 bg_color = Color(0.140447, 0.140447, 0.140447, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -104,61 +111,57 @@ colorImaciente = Color(0.854458, 0.490768, 1.15514e-06, 1)
 colorEnojado = Color(1, 0, 0, 1)
 styleBox = ExtResource("5_t8bru")
 
-[node name="LimInferior" type="Label" parent="CanvasLayer/Indicador"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -23.0
-offset_right = 20.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 20
-text = "😊"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LimInferior2" type="Label" parent="CanvasLayer/Indicador"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 20
-text = "😐"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LimInferior3" type="Label" parent="CanvasLayer/Indicador"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 20
-text = "🤬"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Feedback" parent="CanvasLayer/Indicador" instance=ExtResource("7_kmbn3")]
 process_mode = 3
 offset_left = -28.0
 offset_top = 120.0
 offset_right = -28.0
 offset_bottom = 120.0
+
+[node name="LimInferior" type="TextureRect" parent="CanvasLayer/Indicador"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.9358
+offset_top = -38.0
+offset_right = -38.9358
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("8_jihih")
+expand_mode = 1
+
+[node name="LimMedio" type="TextureRect" parent="CanvasLayer/Indicador"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -68.9358
+offset_top = -18.0
+offset_right = -38.9358
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("9_1y088")
+expand_mode = 1
+
+[node name="LimSuperior" type="TextureRect" parent="CanvasLayer/Indicador"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.9358
+offset_top = 2.0
+offset_right = -38.9358
+offset_bottom = 32.0
+grow_horizontal = 0
+texture = ExtResource("10_qk0fy")
+expand_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
