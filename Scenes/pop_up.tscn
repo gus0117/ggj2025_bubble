@@ -1,24 +1,26 @@
-[gd_scene load_steps=16 format=3 uid="uid://ntlogw2ntig0"]
+[gd_scene load_steps=18 format=3 uid="uid://ntlogw2ntig0"]
 
-[ext_resource type="Texture2D" uid="uid://6dx0ssxlmd35" path="res://Assets/Popup_test/ticket.jpg" id="1_t8vy3"]
 [ext_resource type="Script" path="res://Scripts/PopupHandler.gd" id="1_y7fme"]
-[ext_resource type="Resource" uid="uid://b5h1mneabwqmb" path="res://Resources/evidenceDB.tres" id="2_8a13u"]
 [ext_resource type="Shader" path="res://Shaders/gaussian_blur.gdshader" id="2_yoaxc"]
+[ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="3_qwf2d"]
+[ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="4_ivxp0"]
+[ext_resource type="Texture2D" uid="uid://by7yevm60tkn3" path="res://Assets/Popup/Carpetin2.png" id="5_6prri"]
+[ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="7_7q2g0"]
+[ext_resource type="FontFile" uid="uid://dovvjrgu4g06e" path="res://Assets/Fonts/veteran typewriter.ttf" id="7_jr15u"]
+[ext_resource type="Theme" uid="uid://hxmqenic15hh" path="res://Resources/Button_popup.tres" id="8_awtr0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2jvi"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ig45"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cd2g"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkp5h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt3ej"]
+atlas = ExtResource("3_qwf2d")
+region = Rect2(15, 256, 18, 16)
 
 [sub_resource type="LabelSettings" id="LabelSettings_besme"]
-font_size = 26
+font = ExtResource("4_ivxp0")
+font_size = 20
+font_color = Color(0.277528, 0.277528, 0.277528, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oyygm"]
 shader = ExtResource("2_yoaxc")
@@ -29,36 +31,12 @@ shader_parameter/G = 0.0
 shader_parameter/B = 0.0
 shader_parameter/blur_strength = 0.1
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kgij"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b00bk"]
-bg_color = Color(0.731823, 0.375544, 0.0861287, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uxs8"]
-bg_color = Color(0.47451, 0.231373, 0.0352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_401ih"]
-content_margin_left = 20.0
-content_margin_top = 5.0
-content_margin_right = 20.0
-content_margin_bottom = 5.0
-bg_color = Color(0.886208, 0.475249, 0.159851, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="LabelSettings" id="LabelSettings_yrgt5"]
+font = ExtResource("7_7q2g0")
+font_size = 22
 
 [sub_resource type="Animation" id="Animation_h4van"]
 resource_name = "FadeIn"
-length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -66,7 +44,7 @@ tracks/0/path = NodePath("Body/Blur:material:shader_parameter/blur_strength")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.1, 3.0]
@@ -78,7 +56,7 @@ tracks/1/path = NodePath("Body/Blur:material:shader_parameter/Darkness")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 0.6]
@@ -86,14 +64,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Body/Blur/Description:modulate")
+tracks/2/path = NodePath("Body/Title:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/Description:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ExitPopup:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_1creo"]
@@ -125,14 +127,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Body/Blur/Description:modulate")
+tracks/2/path = NodePath("Body/Title:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/Description:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ExitPopup:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0nhdq"]
@@ -141,17 +167,32 @@ _data = {
 "RESET": SubResource("Animation_1creo")
 }
 
-[node name="PopUp" type="Control"]
+[node name="PopUp" type="Control" node_paths=PackedStringArray("title", "evidence_img", "description", "blurPanel")]
+process_mode = 3
+process_priority = 1
 layout_mode = 3
 anchor_left = 0.316
 anchor_right = 0.759
 anchor_bottom = 1.0
-offset_left = -0.0320129
-offset_right = -0.368042
+offset_left = -1.03201
+offset_right = -1.36804
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y7fme")
-evidences = ExtResource("2_8a13u")
+title = NodePath("Panel/Body/Title")
+evidence_img = NodePath("Panel/Body/EvidenceImg")
+description = NodePath("Panel/Body/Description")
+blurPanel = NodePath("Panel/Body/Blur")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.800491, 0.800491, 0.800491, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_6prri")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -160,107 +201,156 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_g2jvi")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5ig45")
 
 [node name="Header" type="Panel" parent="Panel"]
+z_index = 2
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.102
-offset_right = 6.10352e-05
-offset_bottom = -0.0960007
+anchor_right = 0.941
+anchor_bottom = 0.071
+offset_right = 0.0900269
+offset_bottom = -0.00800323
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2cd2g")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pkp5h")
 
-[node name="Title" type="Label" parent="Panel/Header"]
+[node name="HeaderBackground" type="TextureRect" parent="Panel/Header"]
+visible = false
+modulate = Color(1, 0.784314, 0, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = 3.0
+offset_right = 35.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Evidencia: Ticket de compras "
+texture = SubResource("AtlasTexture_tt3ej")
+expand_mode = 1
+
+[node name="FolderTitle" type="Label" parent="Panel/Header"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.067
+anchor_top = 0.37
+anchor_right = 0.31
+anchor_bottom = 1.0
+offset_left = -0.16
+offset_top = -0.0200005
+offset_right = 0.199997
+offset_bottom = -2.0
+grow_vertical = 2
+text = "Evidencias"
 label_settings = SubResource("LabelSettings_besme")
-horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Body" type="Control" parent="Panel"]
 layout_mode = 1
-anchor_top = 0.11
-anchor_right = 1.0
-anchor_bottom = 0.884
-offset_left = 1.0
-offset_top = -0.280006
-offset_right = -2.99994
-offset_bottom = 0.167969
+anchor_left = 0.024
+anchor_top = 0.079
+anchor_right = 0.92
+anchor_bottom = 0.87
+offset_left = -0.239999
+offset_top = -0.192001
+offset_right = -0.199951
+offset_bottom = 0.239929
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="EvidenceImg" type="TextureRect" parent="Panel/Body"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.254
+anchor_top = 0.273
+anchor_right = 0.744
+anchor_bottom = 0.756
+offset_left = -0.0780029
+offset_top = -0.0489807
+offset_right = -0.00799561
+offset_bottom = 0.172028
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Blur" type="Panel" parent="Panel/Body"]
+material = SubResource("ShaderMaterial_oyygm")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -106.0
-offset_top = -227.5
-offset_right = 108.0
-offset_bottom = 231.5
+offset_left = -603.5
+offset_top = -307.5
+offset_right = 551.5
+offset_bottom = 336.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_t8vy3")
-expand_mode = 1
 
-[node name="Blur" type="Panel" parent="Panel/Body"]
-material = SubResource("ShaderMaterial_oyygm")
+[node name="Title" type="Label" parent="Panel/Body"]
+visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.037
+anchor_right = 0.998
+anchor_bottom = 0.09
+offset_left = 0.172
+offset_top = 0.0190029
+offset_right = -0.0859985
+offset_bottom = -0.169998
 grow_horizontal = 2
-grow_vertical = 2
+text = "Título"
+label_settings = SubResource("LabelSettings_yrgt5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
-[node name="Description" type="MarginContainer" parent="Panel/Body/Blur"]
-modulate = Color(1, 1, 1, 0)
+[node name="Description" type="RichTextLabel" parent="Panel/Body"]
+visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.152
+anchor_right = 0.934
+anchor_bottom = 0.961
+offset_left = -0.162001
+offset_top = 0.0240021
+offset_right = 0.161987
+offset_bottom = 0.00704956
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 10
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Body/Blur/Description"]
-layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("7_jr15u")
+theme_override_fonts/bold_font = ExtResource("7_jr15u")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
+text = "asdasdasdasd"
 
 [node name="ExitPopup" type="Button" parent="Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -29.0
-offset_top = -55.0
-offset_right = 29.0
-offset_bottom = -24.0
+offset_left = -62.0
+offset_top = -92.0
+offset_right = 62.0
+offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 20
-theme_override_styles/focus = SubResource("StyleBoxEmpty_5kgij")
-theme_override_styles/hover = SubResource("StyleBoxFlat_b00bk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_0uxs8")
-theme_override_styles/normal = SubResource("StyleBoxFlat_401ih")
+theme = ExtResource("8_awtr0")
 text = "Cerrar"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
 libraries = {
 "": SubResource("AnimationLibrary_0nhdq")
 }
+
+[connection signal="pressed" from="Panel/ExitPopup" to="." method="_on_exit_popup_pressed"]

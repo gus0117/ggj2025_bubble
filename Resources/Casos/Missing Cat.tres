@@ -1,24 +1,24 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://dhdu3xfoobubl"]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_ljwad"]
+[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_jkths"]
 
 [resource]
-script = ExtResource("1_ljwad")
+script = ExtResource("1_jkths")
 titulo = "Missing Cat"
 nombre = "Martin Flores"
 edad = 39
 pacienciaActual = 0.0
-coartada = "Estaba en mi trabajo como empleado en una empresa, entro temprano salgo tarde."
-urlPrueba1 = "Pase_de_entrada"
+coartada = "No sé nada del gato perdido. Ese día llegué al trabajo a las [b]8:30 AM[/b], como lo muestra el registro de mi pase de entrada. Salí a las [b]6:30 PM[/b], tomé el [b]autobús[/b] de regreso a casa y llegué a las 7:00 PM. No fui a ningún otro lugar. En cuanto a las [b]huellas en la cerca[/b], mi patio está al lado de un sendero donde suelen pasar gatos callejeros. La cerca fue pintada hace poco, y probablemente el gato las dejó mientras cruzaba, pero no entró a mi casa. No tengo nada que esconder."
+urlPrueba1 = "Tarjeta"
 p1_debil = "Un pase de empresa común."
-p1_incompleta = "Un pase de empresa para poder entrar a las instalaciones con el nombre del sospechoso y su información."
+p1_incompleta = "Un pase de empresa para poder entrar a las instalaciones con el [b]nombre del sospechoso y su información.[/b]"
 p1_completa = "Un pase de empresa para entrar con el nombre del sospechoso, su información y su rango en la empresa parece que esta un [b]poco gastado[/b]."
-urlPrueba2 = "Transporte"
-p2_debil = "No tiene auto."
-p2_incompleta = "No tiene auto, camina todos los días a la parada para tomar el colectivo."
-p2_completa = "Hay dos boletos de colectivo ya [b]usados[/b] con el número del día en su bolsillo [b]con la fecha del día de hoy[/b]."
+urlPrueba2 = "Boleto"
+p2_debil = "Un ticket de autobús usado, no tiene auto."
+p2_incompleta = "Un ticket de autobús usado en la línea que [b]conecta su trabajo con su casa.[/b]"
+p2_completa = "Un ticket de autobús con registro de compra a las [b]6:45 PM[/b], coincidiendo con la hora de salida de su trabajo, y que [b]conecta su lugar de trabajo con su casa.[/b]"
 urlPrueba3 = "Huellas"
-p3_debil = "La valla hace poco pintada, tiene algunas imperfecciones "
-p3_incompleta = "Hay imperfecciones en la valla parecen ser huellas de patas."
-p3_completa = "Hay imperfecciones en la valla parecen ser huellas de patas, del otro lado en el suelo [b]hay un rastro de huellas de gato[/b]"
+p3_debil = "La valla hace poco pintada, [b]tiene algunas imperfecciones.[/b]"
+p3_incompleta = "Hay imperfecciones en la valla [b]parecen[/b] ser huellas de patas."
+p3_completa = "[b]Huellas pequeñas[/b] y claramente definidas de felino en la pintura fresca de la cerca del sospechoso, que [b]no conducen al interior de su casa[/b] pero parecen seguir un sendero hacia el vecindario."
 esVerdad = true

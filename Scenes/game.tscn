@@ -1,10 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=19 format=3 uid="uid://cuxm13nayotxw"]
 
+[ext_resource type="Script" path="res://Scripts/Controllers/GameUIController.gd" id="1_1g15q"]
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="1_jl76l"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="1_uycs6"]
 [ext_resource type="FontFile" uid="uid://cvbn6p86fkyet" path="res://Assets/Fonts/mytype.ttf" id="2_e6ymw"]
 [ext_resource type="Texture2D" uid="uid://btj7ngenshygn" path="res://Assets/UI/14 Border 03.png" id="2_s3yyx"]
 [ext_resource type="Texture2D" uid="uid://cnbdyd11nip2e" path="res://Assets/Bubbles/Normal/BubbleText1.png" id="4_uxpx0"]
+[ext_resource type="FontFile" uid="uid://dovvjrgu4g06e" path="res://Assets/Fonts/veteran typewriter.ttf" id="6_0mtms"]
 [ext_resource type="Texture2D" uid="uid://cyhnsc7jp6rre" path="res://Assets/Bubbles/Normal/BubbleText2.png" id="6_cuctb"]
 [ext_resource type="Texture2D" uid="uid://bddkittui7y5y" path="res://Assets/Bubbles/Pressed/BubbleText1Pressed.png" id="6_muka7"]
 [ext_resource type="Texture2D" uid="uid://b31xv87an45yh" path="res://Assets/Bubbles/Hover/BubbleText1Hover.png" id="7_g2g8i"]
@@ -13,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bfeud22y3j3l1" path="res://Assets/Bubbles/Pressed/BubbleText3Pressed.png" id="10_4ofw8"]
 [ext_resource type="Texture2D" uid="uid://c3xck1bpkq8iy" path="res://Assets/Bubbles/Hover/BubbleText2Hover.png" id="10_t7t7w"]
 [ext_resource type="Texture2D" uid="uid://b84k5m85g7h52" path="res://Assets/Bubbles/Hover/BubbleText3Hover.png" id="13_vj5md"]
+[ext_resource type="PackedScene" uid="uid://ntlogw2ntig0" path="res://Scenes/pop_up.tscn" id="15_5l0mh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti5u0"]
 texture = ExtResource("2_s3yyx")
@@ -39,9 +42,9 @@ offset_top = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1g15q")
 
 [node name="Titulocaso" type="Label" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -61,14 +64,13 @@ horizontal_alignment = 1
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.035
-anchor_top = 0.702
-anchor_right = 0.964
-anchor_bottom = 0.98
-offset_left = 39.32
-offset_top = 17.104
-offset_right = 41.472
-offset_bottom = 13.96
+anchor_left = -0.001
+anchor_top = 0.728
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.152
+offset_top = 0.256012
+offset_bottom = 1.00006
 theme_override_styles/panel = SubResource("StyleBoxTexture_ti5u0")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -88,6 +90,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.720339, 0.548178, 0.0894659, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_e6ymw")
+theme_override_font_sizes/font_size = 26
 text = "Coartada
 "
 horizontal_alignment = 1
@@ -96,9 +99,13 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_e6ymw")
+theme_override_fonts/normal_font = ExtResource("6_0mtms")
+theme_override_fonts/italics_font = ExtResource("6_0mtms")
+theme_override_fonts/bold_italics_font = ExtResource("6_0mtms")
+theme_override_fonts/bold_font = ExtResource("6_0mtms")
 theme_override_font_sizes/normal_font_size = 20
-text = "Aqui va la coartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd v oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd
+bbcode_enabled = true
+text = "Aqui [color=red]va[/color] la coartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd v oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd
 as
 dasdasd
 as
@@ -121,14 +128,15 @@ as
 
 [node name="BurbujaEvidencia1" type="TextureButton" parent="."]
 layout_mode = 2
-anchor_left = 0.302
-anchor_top = 0.761
-anchor_right = 0.468
-anchor_bottom = 0.968
-offset_left = 0.0959778
-offset_top = -0.128021
-offset_right = -0.136047
-offset_bottom = 3.73602
+anchor_left = 0.039
+anchor_top = 0.75
+anchor_right = 0.205
+anchor_bottom = 0.963
+offset_left = 0.0719986
+offset_top = -3.05176e-05
+offset_right = -0.160049
+offset_bottom = -0.0240479
+grow_vertical = 0
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_uxpx0")
 texture_pressed = ExtResource("6_muka7")
@@ -139,22 +147,26 @@ stretch_mode = 0
 [node name="ImgEvidencia1" type="TextureRect" parent="BurbujaEvidencia1"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.319
-anchor_top = 0.27
-anchor_right = 0.609
-anchor_bottom = 0.62
-offset_left = 0.740997
-offset_top = -0.0300026
-offset_right = 0.0509949
-offset_bottom = -0.18
+anchor_left = 0.262
+anchor_top = 0.087
+anchor_right = 0.78
+anchor_bottom = 0.71
+offset_left = -0.041996
+offset_top = -0.00600338
+offset_right = 1.02002
+offset_bottom = -0.980026
 expand_mode = 1
 
 [node name="BurbujaEvidencia2" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 600.0
-offset_top = 483.0
-offset_right = 816.0
-offset_bottom = 636.0
+anchor_left = 0.398
+anchor_top = 0.75
+anchor_right = 0.586
+anchor_bottom = 0.986
+offset_left = 0.503967
+offset_top = -3.05176e-05
+offset_right = -0.0720215
+offset_bottom = 0.0719604
 size_flags_horizontal = 3
 texture_normal = ExtResource("6_cuctb")
 texture_pressed = ExtResource("8_j47ws")
@@ -165,22 +177,26 @@ stretch_mode = 0
 [node name="ImgEvidencia2" type="TextureRect" parent="BurbujaEvidencia2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.293
-anchor_top = 0.217
-anchor_right = 0.609
-anchor_bottom = 0.62
-offset_left = 17.667
-offset_top = 14.166
-offset_right = 3.87099
-offset_bottom = -0.239998
+anchor_left = 0.273
+anchor_top = 0.163
+anchor_right = 0.736
+anchor_bottom = 0.719
+offset_left = 0.0319977
+offset_top = 0.0609989
+offset_right = 0.0239868
+offset_bottom = -0.00700378
 expand_mode = 1
 
 [node name="BurbujaEvidencia3" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 879.0
-offset_top = 486.0
-offset_right = 1088.0
-offset_bottom = 638.0
+anchor_left = 0.763
+anchor_top = 0.75
+anchor_right = 0.944
+anchor_bottom = 0.985
+offset_left = 0.0239868
+offset_top = -3.05176e-05
+offset_right = 0.511963
+offset_bottom = -0.280029
 size_flags_horizontal = 3
 texture_normal = ExtResource("8_bpdta")
 texture_pressed = ExtResource("10_4ofw8")
@@ -191,12 +207,21 @@ stretch_mode = 0
 [node name="ImgEvidencia3" type="TextureRect" parent="BurbujaEvidencia3"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.405
-anchor_top = 0.322
-anchor_right = 0.67
-anchor_bottom = 0.653
-offset_left = 0.00498962
-offset_top = -0.0440063
-offset_right = 0.0699921
-offset_bottom = 0.0939941
+anchor_left = 0.263
+anchor_top = 0.112
+anchor_right = 0.742
+anchor_bottom = 0.671
+offset_left = 0.0329971
+offset_top = -0.0240002
+offset_right = -0.0780029
+offset_bottom = 0.00799561
 expand_mode = 1
+
+[node name="PopUp" parent="." instance=ExtResource("15_5l0mh")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="BurbujaEvidencia1" to="." method="_on_burbuja_evidencia_1_pressed"]
+[connection signal="pressed" from="BurbujaEvidencia2" to="." method="_on_burbuja_evidencia_2_pressed"]
+[connection signal="pressed" from="BurbujaEvidencia3" to="." method="_on_burbuja_evidencia_3_pressed"]
+[connection signal="on_close_popup" from="PopUp" to="." method="_on_close_popup"]

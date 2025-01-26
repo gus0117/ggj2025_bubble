@@ -1,37 +1,35 @@
 extends Control
 class_name PopupHandler
 
+# Signal popup
+signal on_close_popup
+
 # Variables component
-@onready var title: Label = $Panel/Header/Title
-@onready var evidence_img: TextureRect = $Panel/Body/EvidenceImg
-@onready var description: RichTextLabel = $Panel/Body/Blur/Description/RichTextLabel
+@export var title: Label
+@export var evidence_img: TextureRect
+@export var description: RichTextLabel
 
 # Effect component
-@onready var blurPanel: Panel = $Panel/Body/Blur
-@onready var descriptionPanel: MarginContainer = $Panel/Body/Blur/Description
+@export var blurPanel: Panel
 @onready var animation_player: AnimationPlayer = $Panel/AnimationPlayer
 
-#Se utiliza un recurso para guardar las imagenes
-@export var evidences: EvidenceDB
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	OpenPopup(0)
-
-func OpenPopup(newIndex: int) -> void:
-	upgradeUI(newIndex)
+func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -> void:
+	get_tree().paused = true
+	title.text = newTitle
+	evidence_img.texture = load(evidencePath)
+	description.text = newDescription
 	self.visible = true
 	await get_tree().create_timer(1.5).timeout
 	FadeInAnimation()
 
-func upgradeUI(index: int)->void:
-	title.text = evidences.evidenceDB[index].title
-	evidence_img.texture = load(evidences.evidenceDB[index].img)
-	description.text = evidences.evidenceDB[index].description
-
 func ClosePopup() -> void:
-	pass
+	get_tree().paused = false
+	visible = false
+	on_close_popup.emit()
+	animation_player.stop()
 
 func FadeInAnimation() -> void:
 	animation_player.play("FadeIn")
+	
+func _on_exit_popup_pressed() -> void:
+	ClosePopup()

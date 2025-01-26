@@ -1,0 +1,43 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://hxmqenic15hh"]
+
+[ext_resource type="FontFile" uid="uid://dovvjrgu4g06e" path="res://Assets/Fonts/veteran typewriter.ttf" id="1_pewxp"]
+[ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="2_sbimf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2pa22"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ktoj"]
+texture = ExtResource("2_sbimf")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(160, 128, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gy0vm"]
+texture = ExtResource("2_sbimf")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(64, 128, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kak15"]
+texture = ExtResource("2_sbimf")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(160, 128, 48, 48)
+modulate_color = Color(0.381703, 0.381703, 0.381703, 1)
+
+[resource]
+Button/colors/font_color = Color(0.248401, 0.2484, 0.2484, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_pewxp")
+Button/styles/focus = SubResource("StyleBoxEmpty_2pa22")
+Button/styles/hover = SubResource("StyleBoxTexture_2ktoj")
+Button/styles/normal = SubResource("StyleBoxTexture_gy0vm")
+Button/styles/pressed = SubResource("StyleBoxTexture_kak15")

@@ -1,7 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://tg433ahge1et"]
+[gd_scene load_steps=14 format=3 uid="uid://tg433ahge1et"]
 
-[ext_resource type="Texture2D" uid="uid://by340ky8at0q5" path="res://Assets/Sospechosos/Sospechoso1.png" id="1_k3srg"]
+[ext_resource type="Script" path="res://Scripts/Controllers/GameController.gd" id="1_2xqlm"]
+[ext_resource type="Texture2D" uid="uid://by340ky8at0q5" path="res://Assets/Sospechosos/default_char.png" id="1_k3srg"]
 [ext_resource type="PackedScene" uid="uid://cuxm13nayotxw" path="res://Scenes/game.tscn" id="1_vyxb3"]
+[ext_resource type="Resource" uid="uid://eyp8yi6ififr" path="res://Resources/Casos/CasosDB.tres" id="2_lfcr7"]
+[ext_resource type="AudioStream" uid="uid://cd7ombn4rlj8" path="res://Assets/Music/caso2.wav" id="3_j6j0p"]
+[ext_resource type="Script" path="res://Scripts/pacientometro.gd" id="4_7dumn"]
+[ext_resource type="StyleBox" uid="uid://vjduxy04j0bw" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
+[ext_resource type="Texture2D" uid="uid://bdesnety1momn" path="res://Assets/Nivel/fondofinal.png" id="6_kjym8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eenr2"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5kel"]
+bg_color = Color(1, 0.330927, 0.367176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="Animation" id="Animation_6m5ns"]
 resource_name = "Nervioso"
@@ -42,17 +62,121 @@ _data = {
 }
 
 [node name="MainGame" type="Node2D"]
+script = ExtResource("1_2xqlm")
+db = ExtResource("2_lfcr7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Indicador" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = 0.915
+anchor_top = 0.014
+anchor_right = 0.992
+anchor_bottom = 0.289
+offset_left = -0.0800781
+offset_top = -0.0720005
+offset_right = 0.215942
+offset_bottom = -0.272003
+grow_horizontal = 0
+
+[node name="Pacientometro" type="ProgressBar" parent="CanvasLayer/Indicador"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -87.0
+offset_right = 29.0
+offset_bottom = 87.0
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_eenr2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_q5kel")
+max_value = 1.0
+step = 0.1
+fill_mode = 3
+show_percentage = false
+script = ExtResource("4_7dumn")
+colorPaciente = Color(0, 0.730016, 9.62615e-07, 1)
+colorNormal = Color(0.880472, 0.880472, 0, 1)
+colorImaciente = Color(0.854458, 0.490768, 1.15514e-06, 1)
+colorEnojado = Color(1, 0, 0, 1)
+styleBox = ExtResource("5_t8bru")
+
+[node name="LimInferior" type="Label" parent="CanvasLayer/Indicador"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "😊"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LimInferior2" type="Label" parent="CanvasLayer/Indicador"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "😐"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LimInferior3" type="Label" parent="CanvasLayer/Indicador"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "🤬"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Game" parent="CanvasLayer" instance=ExtResource("1_vyxb3")]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(616, 324)
+scale = Vector2(0.645833, 0.661111)
+texture = ExtResource("6_kjym8")
 
 [node name="Sospechoso" type="Sprite2D" parent="."]
 position = Vector2(778, 250)
-scale = Vector2(0.556, 0.556)
+scale = Vector2(0.556, 0.650368)
 texture = ExtResource("1_k3srg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sospechoso"]
 libraries = {
 "": SubResource("AnimationLibrary_wrmgh")
 }
+
+[node name="TimerPaciencia" type="Timer" parent="Sospechoso"]
+wait_time = 5.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("3_j6j0p")
+volume_db = -9.582
+autoplay = true
+
+[connection signal="on_angry_bubble" from="CanvasLayer/Game" to="." method="_on_angry_bubble"]
+[connection signal="on_normal_bubble" from="CanvasLayer/Game" to="." method="_on_normal_bubble"]
+[connection signal="on_relax_bubble" from="CanvasLayer/Game" to="." method="_on_relax_bubble"]
+[connection signal="timeout" from="Sospechoso/TimerPaciencia" to="." method="_on_timer_paciencia_timeout"]

@@ -1,24 +1,24 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://dmwqg8hlp16bj"]
 
-[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_4faj2"]
+[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_gm80b"]
 
 [resource]
-script = ExtResource("1_4faj2")
+script = ExtResource("1_gm80b")
 titulo = "Robo de globos con estrellas"
 nombre = "Rubén Baltazar López (payaso buble)"
 edad = 25
 pacienciaActual = 0.0
-coartada = "Yo llegué tarde porque me estaba maquillando, además habia mucho tráfico. No se nada de los globos robados."
-urlPrueba1 = "maquillaje_payaso"
-p1_debil = "Es solo maquillaje."
-p1_incompleta = "Es maquillaje de payaso con los colores que siempre uso."
-p1_completa = "Es maquillaje de payaso con los colores que siempre uso… pero sí, lo terminé de aplicar un poco antes de que llegara a la fiesta. No sé cómo pude tardar tanto!"
-urlPrueba2 = "hora_de_llegada"
-p2_debil = "Sí, llegué tarde."
-p2_incompleta = "Sí, llegué tarde… había tráfico."
-p2_completa = "Sí, llegué tarde… había tráfico. ¡Pero eso me dio tiempo de inflar algunos globos extra antes de salir de casa!"
-urlPrueba3 = "los_Globos_de_bubble"
-p3_debil = "Sí, yo tenía globos."
-p3_incompleta = "Sí, yo tenía globos. Siempre llevo algunos."
-p3_completa = "Sí, yo tenía globos. Siempre llevo algunos… pero, entre esos globlos hay una cinta que dice feliz cumpleaños tobias al igual que los globos perdidos."
+coartada = "Yo no tengo nada que ver con ese robo. [b]Llegué tarde[/b] a la fiesta de mi antiguo jefe porque tuve un problema con el [b]maquillaje[/b]; me llevó más tiempo aplicarlo hoy. Sobre el frasco de maquillaje, ¡cualquiera podría tener uno igual! Los globos encontrados en mi [b]mochila[/b]... soy un payaso, debo tener esas cosas. Solo quiero seguir adelante con mi vida."
+urlPrueba1 = "Maquillaje"
+p1_debil = "Es solo un frasco de maquillaje."
+p1_incompleta = "Un frasco de maquillaje con [b]residuos[/b] de pintura que coinciden con el del sospechoso."
+p1_completa = "Un frasco de maquillaje profesional con restos de pintura azul y amarilla, los [b]mismos colores[/b] encontrados en la escena del robo."
+urlPrueba2 = "Hora de llegada"
+p2_debil = "El sospechoso llegó tarde al trabajo."
+p2_incompleta = "El sospechoso llegó tarde a la fiesta de su antiguo jefe."
+p2_completa = "El sospechoso llegó exactamente 20 minutos tarde a la fiesta de su antiguo jefe, a las 3:20 PM, mientras el [b]robo ocurrió entre las 2:50 y 3:10 PM.[/b]"
+urlPrueba3 = "Mochila"
+p3_debil = "Unos globos en su mochila, pero un payaso debe tenerlos para su trabajo."
+p3_incompleta = "Los globos en esta mochila son [b]parecidos a los del cumpleaños.[/b]"
+p3_completa = "Los globos en esta mochila [b]tienen el nombre Tobías[/b] en ellos, son los del cumpleaños!"
 esVerdad = false
