@@ -1,8 +1,6 @@
 extends Node2D
 class_name GameController
 
-@export var db: CasosDB
-
 #Scenes References
 @onready var sprSospechoso: Sprite2D = $Sospechoso
 @onready var gameui: GameUIController = $CanvasLayer/Game
@@ -21,8 +19,9 @@ var defaultSprite = preload("res://Assets/Sospechosos/default_char.png")
 enum Emotion {NORMAL, ANGRY, RELAX}
 
 func _ready() -> void:
-	if db != null:
-		casoActual = db.casos[casoIndice]
+	if GlobalParameters.db != null:
+		casoActual = GlobalParameters.db.casos[casoIndice]
+		GlobalParameters.respuestaCasoActual = casoActual.esVerdad
 		gameui.UpdateUI(casoActual)
 		pacientometro.updatePacientometro(casoActual.pacienciaActual)
 		updateCharacter()
@@ -83,6 +82,7 @@ func GetPacienceByAge(age: int, e: Emotion) -> float:
 	return pacience
 
 func FinishInterview() -> void:
+	get_tree().change_scene_to_file("res://Scenes/pantalla_final.tscn")
 	pass
 
 func _on_timer_paciencia_timeout() -> void:

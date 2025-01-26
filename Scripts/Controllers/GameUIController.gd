@@ -126,6 +126,10 @@ func _on_burbuja_evidencia_3_pressed() -> void:
 
 
 func _on_close_popup() -> void:
+	#Si indice es igual a 3 pasar al final
+	if evidenciaActual == 3:
+		get_tree().change_scene_to_file("res://Scenes/pantalla_final.tscn")
+		return
 	# Aumentar el indice para pasar a otra evidencia
 	IncreseEvidenceIndex()
 	# Actualiza las burbujas

@@ -19,6 +19,22 @@ tracks/0/keys = {
 "values": [-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18]
 }
 
+[sub_resource type="Animation" id="Animation_vd2c8"]
+resource_name = "MostrarTitulo"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/TitleGame:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 0.297302),
+"update": 0,
+"values": [-0.0555556, 1.0]
+}
+
 [sub_resource type="Animation" id="Animation_2dmqv"]
 length = 0.001
 tracks/0/type = "value"
@@ -44,22 +60,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [-0.0555556]
-}
-
-[sub_resource type="Animation" id="Animation_vd2c8"]
-resource_name = "MostrarTitulo"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer/VBoxContainer/TitleGame:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 0.297302),
-"update": 0,
-"values": [-0.0555556, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7581i"]

@@ -20,6 +20,10 @@ config/icon="res://Assets/logo-policia.png"
 
 general/text_to_speech=true
 
+[autoload]
+
+GlobalParameters="*res://Scenes/Global/global_node.tscn"
+
 [display]
 
 window/size/viewport_width=1320
