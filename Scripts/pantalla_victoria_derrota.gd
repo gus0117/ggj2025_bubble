@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func _on_sig_caso_pressed() -> void:
 	GlobalParameters.PasarSiguienteCaso()
-	get_tree().change_scene_to_file("res://Scenes/main_game.tscn")
+	get_tree().change_scene_to_file("res://Scenes/loading_screen.tscn")
 
 
 
