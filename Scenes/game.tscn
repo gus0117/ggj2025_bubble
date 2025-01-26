@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cuxm13nayotxw"]
+[gd_scene load_steps=20 format=3 uid="uid://cuxm13nayotxw"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/GameUIController.gd" id="1_1g15q"]
 [ext_resource type="Texture2D" uid="uid://cyvnbl878hydv" path="res://Assets/UI/UI books & more.png" id="1_jl76l"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cr3u1w1nw2psk" path="res://Assets/Bubbles/Hover/BubbleText2Hover2.png" id="12_foepa"]
 [ext_resource type="PackedScene" uid="uid://ntlogw2ntig0" path="res://Scenes/pop_up.tscn" id="15_5l0mh"]
 [ext_resource type="Texture2D" uid="uid://thoha6npxf7n" path="res://Assets/Bubbles/Hover/BubbleText3Hover2.png" id="15_p54l6"]
+[ext_resource type="Texture2D" uid="uid://vrjnnfitcou8" path="res://Assets/UI/menu.png" id="17_gsmpl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti5u0"]
 texture = ExtResource("2_s3yyx")
@@ -223,7 +224,20 @@ expand_mode = 1
 visible = false
 layout_mode = 1
 
+[node name="MenuButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture_normal = ExtResource("17_gsmpl")
+texture_pressed = ExtResource("17_gsmpl")
+texture_hover = ExtResource("17_gsmpl")
+
 [connection signal="pressed" from="BurbujaEvidencia1" to="." method="_on_burbuja_evidencia_1_pressed"]
 [connection signal="pressed" from="BurbujaEvidencia2" to="." method="_on_burbuja_evidencia_2_pressed"]
 [connection signal="pressed" from="BurbujaEvidencia3" to="." method="_on_burbuja_evidencia_3_pressed"]
 [connection signal="on_close_popup" from="PopUp" to="." method="_on_close_popup"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
