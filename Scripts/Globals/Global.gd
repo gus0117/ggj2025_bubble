@@ -12,7 +12,7 @@ var indiceCasos: int = 0
 func PasarSiguienteCaso() -> void:
 	indiceCasos += 1
 	if indiceCasos >= db.casos.size():
-		indiceCasos = 0
+		Reiniciar()
 
 func Reiniciar() -> void:
 	indiceCasos = 0
