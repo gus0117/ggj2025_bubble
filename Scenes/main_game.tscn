@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://tg433ahge1et"]
+[gd_scene load_steps=14 format=3 uid="uid://tg433ahge1et"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/GameController.gd" id="1_2xqlm"]
 [ext_resource type="Texture2D" uid="uid://by340ky8at0q5" path="res://Assets/Sospechosos/default_char.png" id="1_k3srg"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cd7ombn4rlj8" path="res://Assets/Music/caso2.wav" id="3_j6j0p"]
 [ext_resource type="Script" path="res://Scripts/pacientometro.gd" id="4_7dumn"]
 [ext_resource type="StyleBox" uid="uid://vjduxy04j0bw" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
+[ext_resource type="Texture2D" uid="uid://bdesnety1momn" path="res://Assets/Nivel/fondofinal.png" id="6_kjym8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eenr2"]
 bg_color = Color(0, 0, 0, 1)
@@ -151,9 +152,14 @@ vertical_alignment = 1
 
 [node name="Game" parent="CanvasLayer" instance=ExtResource("1_vyxb3")]
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(616, 324)
+scale = Vector2(0.645833, 0.661111)
+texture = ExtResource("6_kjym8")
+
 [node name="Sospechoso" type="Sprite2D" parent="."]
 position = Vector2(778, 250)
-scale = Vector2(0.556, 0.556)
+scale = Vector2(0.556, 0.650368)
 texture = ExtResource("1_k3srg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sospechoso"]
