@@ -12,6 +12,7 @@ signal on_close_popup
 # Effect component
 @export var blurPanel: Panel
 @onready var animation_player: AnimationPlayer = $Panel/AnimationPlayer
+@onready var sfx: AudioStreamPlayer = $SFX
 
 func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -> void:
 	get_tree().paused = true
@@ -21,6 +22,12 @@ func OpenPopup(newTitle: String, newDescription: String, evidencePath: String) -
 	self.visible = true
 	await get_tree().create_timer(1.5).timeout
 	FadeInAnimation()
+	PlaySFX(newTitle)
+
+func PlaySFX(newTitle: String) -> void:
+	var path :String = "res://Assets/SFX/sfx_"+newTitle+".wav"
+	sfx.stream = load(path)
+	sfx.play()
 
 func ClosePopup() -> void:
 	get_tree().paused = false
