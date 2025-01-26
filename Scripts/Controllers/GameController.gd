@@ -33,13 +33,12 @@ func updateCharacter():
 	timer_paciencia.start()
 
 func UpdatePaciencia(value: float) -> void:
-	casoActual.pacienciaActual += value
-	
-	if casoActual.pacienciaActual < 0:
-		casoActual.pacienciaActual = 0
-	elif casoActual.pacienciaActual > 1:
-		casoActual.pacienciaActual = 1
-		
+	var nuevaPaciencia = casoActual.pacienciaActual + value
+	if nuevaPaciencia < 0:
+		nuevaPaciencia = 0
+	elif nuevaPaciencia > 1:
+		nuevaPaciencia = 1
+	casoActual.pacienciaActual = nuevaPaciencia
 	#Animacion Nerviosa
 	if casoActual.pacienciaActual > 0.7:
 		#Color naranja
