@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgi4uq2bs15ep"
-path="res://.godot/imported/E_Remera.png-19784997f9dcfd8d060b11794feceb08.ctex"
+uid="uid://dx8y22uhq0g6r"
+path="res://.godot/imported/icono_Hora de llegada.png-4483a4d8cba8180b4d59322c98e25bde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/E_Remera.png"
-dest_files=["res://.godot/imported/E_Remera.png-19784997f9dcfd8d060b11794feceb08.ctex"]
+source_file="res://Assets/Evidence/Iconos/icono_Hora de llegada.png"
+dest_files=["res://.godot/imported/icono_Hora de llegada.png-4483a4d8cba8180b4d59322c98e25bde.ctex"]
 
 [params]
 
