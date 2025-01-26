@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8lo8j6lisvy"
-path="res://.godot/imported/Sospechoso_C2.png-53af1bb77151f99783280eb1b60b1912.ctex"
+uid="uid://567ymfjddbgj"
+path="res://.godot/imported/Juan Jackson.png-8e1aad22348535c945f3aa07c83de095.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sospechosos/Sospechoso_C2.png"
-dest_files=["res://.godot/imported/Sospechoso_C2.png-53af1bb77151f99783280eb1b60b1912.ctex"]
+source_file="res://Assets/Sospechosos/Juan Jackson.png"
+dest_files=["res://.godot/imported/Juan Jackson.png-8e1aad22348535c945f3aa07c83de095.ctex"]
 
 [params]
 

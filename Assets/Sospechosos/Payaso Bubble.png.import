@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://567ymfjddbgj"
-path="res://.godot/imported/Sospechoso_C1.png-7ff93383f20e413271d029063f365b99.ctex"
+uid="uid://cd8lo8j6lisvy"
+path="res://.godot/imported/Payaso Bubble.png-c432a4d5be022bf67e95235ff20c1b8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sospechosos/Sospechoso_C1.png"
-dest_files=["res://.godot/imported/Sospechoso_C1.png-7ff93383f20e413271d029063f365b99.ctex"]
+source_file="res://Assets/Sospechosos/Payaso Bubble.png"
+dest_files=["res://.godot/imported/Payaso Bubble.png-c432a4d5be022bf67e95235ff20c1b8b.ctex"]
 
 [params]
 
