@@ -12,6 +12,13 @@ func _ready() -> void:
 		derrota.visible = true
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_sig_caso_pressed() -> void:
+	GlobalParameters.PasarSiguienteCaso()
+	get_tree().change_scene_to_file("res://Scenes/main_game.tscn")
+
+
+
+
+func _on_volver_menu_pressed() -> void:
+	GlobalParameters.Reiniciar()
+	get_tree().change_scene_to_file("res://Scenes/menuback.tscn")

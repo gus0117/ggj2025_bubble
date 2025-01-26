@@ -175,3 +175,6 @@ offset_right = 0.0159912
 offset_bottom = -0.120056
 theme = ExtResource("1_hxh2s")
 text = "Volver al menú"
+
+[connection signal="pressed" from="SigCaso" to="." method="_on_sig_caso_pressed"]
+[connection signal="pressed" from="VolverMenu" to="." method="_on_volver_menu_pressed"]

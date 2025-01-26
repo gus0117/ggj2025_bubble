@@ -10,7 +10,6 @@ class_name GameController
 
 #Variables
 var casoActual : Caso
-var casoIndice : int = 2 #Inicia en 0
 
 #default
 var defaultSprite = preload("res://Assets/Sospechosos/default_char.png")
@@ -20,7 +19,7 @@ enum Emotion {NORMAL, ANGRY, RELAX}
 
 func _ready() -> void:
 	if GlobalParameters.db != null:
-		casoActual = GlobalParameters.db.casos[casoIndice]
+		casoActual = GlobalParameters.db.casos[GlobalParameters.indiceCasos]
 		GlobalParameters.respuestaCasoActual = casoActual.esVerdad
 		gameui.UpdateUI(casoActual)
 		pacientometro.updatePacientometro(casoActual.pacienciaActual)
