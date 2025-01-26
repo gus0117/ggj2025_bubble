@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3op4vmbkw2ad"
-path="res://.godot/imported/E_Huellas.png-ea7b1be9f0b8e5ff1ebaadeab927c3dd.ctex"
+uid="uid://d2vhst0caxvwp"
+path="res://.godot/imported/Nivel.png-0b1822609979391882fb65a025c3d265.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Evidence/E_Huellas.png"
-dest_files=["res://.godot/imported/E_Huellas.png-ea7b1be9f0b8e5ff1ebaadeab927c3dd.ctex"]
+source_file="res://Assets/MenuBackground/Nivel.png"
+dest_files=["res://.godot/imported/Nivel.png-0b1822609979391882fb65a025c3d265.ctex"]
 
 [params]
 
