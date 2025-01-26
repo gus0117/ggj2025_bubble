@@ -11,4 +11,3 @@ Este trabajo está licenciado bajo una "Licencia Creative Commons Reconocimiento
 Puede copiar, redistribuir y modificar este trabajo bajo los términos de esta licencia, siempre que reconozca la autoría original.  
 
 Enlace a la licencia: "https://creativecommons.org/licenses/by/4.0/"
-
