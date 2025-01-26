@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dqd85yr1juibi"
-path="res://.godot/imported/sfx_C2_mochila.wav-55a9931a76a7e81a74e2f1389f4b5334.sample"
+path="res://.godot/imported/sfx_Mochila.wav-fe635a3281ce1670187704544290d3a5.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/sfx_C2_mochila.wav"
-dest_files=["res://.godot/imported/sfx_C2_mochila.wav-55a9931a76a7e81a74e2f1389f4b5334.sample"]
+source_file="res://Assets/SFX/sfx_Mochila.wav"
+dest_files=["res://.godot/imported/sfx_Mochila.wav-fe635a3281ce1670187704544290d3a5.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cpdagmb7whmxl"
-path="res://.godot/imported/sfx_C1_pasedigital.wav-6ec20e69918c9001990e57e610e01f26.sample"
+path="res://.godot/imported/sfx_Tarjeta.wav-c590a4d2d45dc737fc0afd1c10084e69.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/sfx_C1_pasedigital.wav"
-dest_files=["res://.godot/imported/sfx_C1_pasedigital.wav-6ec20e69918c9001990e57e610e01f26.sample"]
+source_file="res://Assets/SFX/sfx_Tarjeta.wav"
+dest_files=["res://.godot/imported/sfx_Tarjeta.wav-c590a4d2d45dc737fc0afd1c10084e69.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b2op4vwyvybmk"
-path="res://.godot/imported/sfx_C3_boleto.wav-4a931d7f413bcafcf2116e385d7e26e5.sample"
+path="res://.godot/imported/sfx_Boleto.wav-150105e777ccdec133f65ebf6cf978d3.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/sfx_C3_boleto.wav"
-dest_files=["res://.godot/imported/sfx_C3_boleto.wav-4a931d7f413bcafcf2116e385d7e26e5.sample"]
+source_file="res://Assets/SFX/sfx_Boleto.wav"
+dest_files=["res://.godot/imported/sfx_Boleto.wav-150105e777ccdec133f65ebf6cf978d3.sample"]
 
 [params]
 

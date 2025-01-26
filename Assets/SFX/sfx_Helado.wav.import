@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2w3labr63qvm"
-path="res://.godot/imported/sfx_C1_potehelado.wav-b613f801a92e7496a2719ab9bf05051a.sample"
+path="res://.godot/imported/sfx_Helado.wav-2fd350a9ae402e40a326db156baf6fd8.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/sfx_C1_potehelado.wav"
-dest_files=["res://.godot/imported/sfx_C1_potehelado.wav-b613f801a92e7496a2719ab9bf05051a.sample"]
+source_file="res://Assets/SFX/sfx_Helado.wav"
+dest_files=["res://.godot/imported/sfx_Helado.wav-2fd350a9ae402e40a326db156baf6fd8.sample"]
 
 [params]
 

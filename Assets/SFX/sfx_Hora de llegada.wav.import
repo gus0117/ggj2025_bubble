@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c06wllusjcfym"
-path="res://.godot/imported/sfx_C2_reloj.wav-399b29086b9f1596fdb28e0bc52feb2b.sample"
+path="res://.godot/imported/sfx_Hora de llegada.wav-8aae0f7b311f4a2cf523c59a31b1b7cc.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/sfx_C2_reloj.wav"
-dest_files=["res://.godot/imported/sfx_C2_reloj.wav-399b29086b9f1596fdb28e0bc52feb2b.sample"]
+source_file="res://Assets/SFX/sfx_Hora de llegada.wav"
+dest_files=["res://.godot/imported/sfx_Hora de llegada.wav-8aae0f7b311f4a2cf523c59a31b1b7cc.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dkcxoac72s8cy"
-path="res://.godot/imported/sfx_C2_maquillaje.wav-9dc831de8258dbfc3b6949376a14d457.sample"
+path="res://.godot/imported/sfx_Maquillaje.wav-af98db9e908af430a2056466fd664ee2.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/sfx_C2_maquillaje.wav"
-dest_files=["res://.godot/imported/sfx_C2_maquillaje.wav-9dc831de8258dbfc3b6949376a14d457.sample"]
+source_file="res://Assets/SFX/sfx_Maquillaje.wav"
+dest_files=["res://.godot/imported/sfx_Maquillaje.wav-af98db9e908af430a2056466fd664ee2.sample"]
 
 [params]
 

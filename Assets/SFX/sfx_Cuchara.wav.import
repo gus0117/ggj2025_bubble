@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://061ppsut4a3q"
-path="res://.godot/imported/sfx_C1_cuchara.wav-7e0390618ad63f557de3dc41a7539535.sample"
+path="res://.godot/imported/sfx_Cuchara.wav-65a4c053735b012ebd084bea5b4a9850.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/sfx_C1_cuchara.wav"
-dest_files=["res://.godot/imported/sfx_C1_cuchara.wav-7e0390618ad63f557de3dc41a7539535.sample"]
+source_file="res://Assets/SFX/sfx_Cuchara.wav"
+dest_files=["res://.godot/imported/sfx_Cuchara.wav-65a4c053735b012ebd084bea5b4a9850.sample"]
 
 [params]
 
