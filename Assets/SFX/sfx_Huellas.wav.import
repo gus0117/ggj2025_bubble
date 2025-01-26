@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dna2lpymgejvj"
-path="res://.godot/imported/valla2.wav-c583efcb328be24f07eb11770a356127.sample"
+path="res://.godot/imported/sfx_Huellas.wav-592cf54e1b44f305b275db568f275a5e.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/valla2.wav"
-dest_files=["res://.godot/imported/valla2.wav-c583efcb328be24f07eb11770a356127.sample"]
+source_file="res://Assets/SFX/sfx_Huellas.wav"
+dest_files=["res://.godot/imported/sfx_Huellas.wav-592cf54e1b44f305b275db568f275a5e.sample"]
 
 [params]
 
