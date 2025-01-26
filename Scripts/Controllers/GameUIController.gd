@@ -20,6 +20,10 @@ var evidenciaActual: int #Indice que va de 1 a 3, sirve para gestionar las evide
 #Enums
 enum TextureType {ICON, EVIDENCE}
 
+#TTS
+var voices = DisplayServer.tts_get_voices_for_language("es")
+var voice_id = voices[0]
+
 func _ready() -> void:
 	InitCase()
 
@@ -34,6 +38,7 @@ func UpdateUI(nuevoCaso: Caso) -> void:
 func UpdateCoartada() -> void:
 	titulocaso.text = casoActual.titulo
 	coartada_rich_text.text = casoActual.coartada
+	#DisplayServer.tts_speak(casoActual.coartada, voice_id)
 
 func UpdateBubbles() -> void:
 	if evidenciaActual > 3: # Solo hay 3 evidencias por personaje
