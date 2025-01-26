@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsr0exsyuu0oc"]
+[gd_scene load_steps=13 format=3 uid="uid://dsr0exsyuu0oc"]
 
+[ext_resource type="Script" path="res://Scripts/pantalla_final.gd" id="1_fighs"]
 [ext_resource type="Texture2D" uid="uid://cnbdyd11nip2e" path="res://Assets/Bubbles/Normal/BubbleText1.png" id="1_x14p2"]
 [ext_resource type="Texture2D" uid="uid://bddkittui7y5y" path="res://Assets/Bubbles/Pressed/BubbleText1Pressed.png" id="2_arj7u"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="2_rpauh"]
@@ -51,7 +52,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../TextureButton:modulate")
+tracks/3/path = NodePath("../No_option:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -63,7 +64,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../TextureButton2:modulate")
+tracks/4/path = NodePath("../Si_option:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -75,7 +76,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../TextureButton:visible")
+tracks/5/path = NodePath("../No_option:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -87,7 +88,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../TextureButton2:visible")
+tracks/6/path = NodePath("../Si_option:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -118,6 +119,18 @@ tracks/7/keys = {
 "args": [0.0],
 "method": &"play"
 }]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Pregunta:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 6.6, 7.26667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_6au7q"]
@@ -197,7 +210,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../TextureButton2:modulate")
+tracks/6/path = NodePath("../Si_option:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -209,7 +222,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../TextureButton2:visible")
+tracks/7/path = NodePath("../Si_option:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -221,7 +234,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("../TextureButton:visible")
+tracks/8/path = NodePath("../No_option:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -233,7 +246,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("../TextureButton:modulate")
+tracks/9/path = NodePath("../No_option:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -241,6 +254,18 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Pregunta:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k6gbf"]
@@ -256,19 +281,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fighs")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Dialogo1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 176.0
-offset_top = -42.0
-offset_right = 593.0
-offset_bottom = 242.0
+offset_left = 285.505
+offset_top = 23.0
+offset_right = 702.505
+offset_bottom = 307.0
 rotation = 0.261799
 texture = ExtResource("1_x14p2")
 expand_mode = 1
@@ -288,10 +317,10 @@ horizontal_alignment = 1
 [node name="Dialogo2" type="TextureRect" parent="."]
 modulate = Color(0.121569, 0.121569, 0.121569, 1)
 layout_mode = 0
-offset_left = 619.0
-offset_top = 201.0
-offset_right = 1036.0
-offset_bottom = 485.0
+offset_left = 728.505
+offset_top = 266.0
+offset_right = 1145.5
+offset_bottom = 550.0
 rotation = -0.261799
 texture = ExtResource("1_x14p2")
 expand_mode = 1
@@ -312,10 +341,10 @@ horizontal_alignment = 1
 [node name="Dialogo3" type="TextureRect" parent="."]
 modulate = Color(0.121569, 0.121569, 0.121569, 1)
 layout_mode = 0
-offset_left = 251.0
-offset_top = 266.0
-offset_right = 668.0
-offset_bottom = 550.0
+offset_left = 360.505
+offset_top = 331.0
+offset_right = 777.505
+offset_bottom = 615.0
 rotation = 0.261799
 texture = ExtResource("1_x14p2")
 expand_mode = 1
@@ -332,17 +361,17 @@ theme_override_font_sizes/font_size = 19
 text = "¿Deberíamos ponerlo tras las rejas?"
 horizontal_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="No_option" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 634.0
-offset_top = 108.0
-offset_right = 1106.0
-offset_bottom = 491.0
+offset_left = 749.0
+offset_top = 246.0
+offset_right = 1221.0
+offset_bottom = 629.0
 texture_normal = ExtResource("1_x14p2")
 texture_pressed = ExtResource("2_arj7u")
 texture_hover = ExtResource("3_ypglk")
 
-[node name="Label" type="Label" parent="TextureButton"]
+[node name="Label" type="Label" parent="No_option"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.261
@@ -360,17 +389,17 @@ text = "No"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="."]
+[node name="Si_option" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 86.0
-offset_right = 548.0
-offset_bottom = 504.0
+offset_left = 135.0
+offset_top = 224.0
+offset_right = 663.0
+offset_bottom = 642.0
 texture_normal = ExtResource("3_wiian")
 texture_pressed = ExtResource("6_1r0as")
 texture_hover = ExtResource("7_i7b5i")
 
-[node name="Label" type="Label" parent="TextureButton2"]
+[node name="Label" type="Label" parent="Si_option"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.337
@@ -399,3 +428,22 @@ autoplay = "FadeInAll"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_y3xm1")
+
+[node name="Pregunta" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -406.0
+offset_top = 68.0
+offset_right = 406.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_rpauh")
+theme_override_font_sizes/font_size = 50
+text = "¿El sospechoso dice la verdad?"
+
+[connection signal="pressed" from="No_option" to="." method="_on_no_option_pressed"]
+[connection signal="pressed" from="Si_option" to="." method="_on_si_option_pressed"]
