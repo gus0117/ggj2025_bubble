@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbkf1sjn0a7u3"]
+[gd_scene load_steps=8 format=3 uid="uid://cbkf1sjn0a7u3"]
 
 [ext_resource type="Theme" uid="uid://5wbfji3wdgbs" path="res://Resources/Button_Theme.tres" id="1_hxh2s"]
 [ext_resource type="Texture2D" uid="uid://cdda46u4ptybi" path="res://Assets/MenuBackground/fondofinal.png" id="1_jw7dg"]
+[ext_resource type="Script" path="res://Scripts/pantalla_victoria_derrota.gd" id="1_yhlm5"]
 [ext_resource type="Shader" path="res://Shaders/gaussian_blur.gdshader" id="2_hffux"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="3_33v8y"]
 [ext_resource type="FontFile" uid="uid://5yq70gcmwhlu" path="res://Assets/Fonts/ReenieBeanie.ttf" id="4_xaxhr"]
@@ -22,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yhlm5")
 
 [node name="Fondo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -39,9 +41,111 @@ expand_mode = 1
 
 [node name="Panel" type="Panel" parent="."]
 material = SubResource("ShaderMaterial_nfhc1")
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Victoria" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TituloVictoria" type="Label" parent="Victoria"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.294118, 0.890196, 0.345098, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 45
+theme_override_fonts/font = ExtResource("3_33v8y")
+theme_override_font_sizes/font_size = 100
+text = "¡Lo Hiciste!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MensajeVictoria" type="Label" parent="Victoria"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -109.5
+offset_right = 576.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 19
+theme_override_fonts/font = ExtResource("4_xaxhr")
+theme_override_font_sizes/font_size = 70
+text = "Estuviste muy atento a las pistas detective y 
+no te dejaste engañar por el sospechoso.
+¡Felicidades!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Derrota" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TituloDerrota" type="Label" parent="Derrota"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.0823529, 0.176471, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 45
+theme_override_fonts/font = ExtResource("3_33v8y")
+theme_override_font_sizes/font_size = 100
+text = "¡Fallaste!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MensajeDerrota" type="Label" parent="Derrota"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -109.5
+offset_right = 576.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 19
+theme_override_fonts/font = ExtResource("4_xaxhr")
+theme_override_font_sizes/font_size = 70
+text = "Se te escaparon algunos detalles detective.
+ Mejor suerte para la próxima."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SigCaso" type="Button" parent="."]
 layout_mode = 1
@@ -71,58 +175,3 @@ offset_right = 0.0159912
 offset_bottom = -0.120056
 theme = ExtResource("1_hxh2s")
 text = "Volver al menú"
-
-[node name="TituloVictoria" type="Label" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 95.0
-theme_override_colors/font_color = Color(0.294118, 0.890196, 0.345098, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 45
-theme_override_fonts/font = ExtResource("3_33v8y")
-theme_override_font_sizes/font_size = 100
-text = "¡Lo Hiciste!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TituloDerrota" type="Label" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 95.0
-theme_override_colors/font_color = Color(1, 0.0823529, 0.176471, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 45
-theme_override_fonts/font = ExtResource("3_33v8y")
-theme_override_font_sizes/font_size = 100
-text = "¡Fallaste!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MensajeVictoria" type="Label" parent="."]
-layout_mode = 0
-offset_top = 222.0
-offset_right = 1152.0
-offset_bottom = 441.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 19
-theme_override_fonts/font = ExtResource("4_xaxhr")
-theme_override_font_sizes/font_size = 70
-text = "Estuviste muy atento a las pistas detective y 
-no te dejaste engañar por el sospechoso.
-¡Felicidades!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MensajeDerrota" type="Label" parent="."]
-layout_mode = 0
-offset_top = 222.0
-offset_right = 1152.0
-offset_bottom = 441.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 19
-theme_override_fonts/font = ExtResource("4_xaxhr")
-theme_override_font_sizes/font_size = 70
-text = "Se te escaparon algunos detalles detective.
- Mejor suerte para la próxima."
-horizontal_alignment = 1
-vertical_alignment = 1
