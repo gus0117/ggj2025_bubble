@@ -90,6 +90,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.720339, 0.548178, 0.0894659, 1)
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_e6ymw")
+theme_override_font_sizes/font_size = 26
 text = "Coartada
 "
 horizontal_alignment = 1
@@ -99,8 +100,12 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("6_0mtms")
+theme_override_fonts/italics_font = ExtResource("6_0mtms")
+theme_override_fonts/bold_italics_font = ExtResource("6_0mtms")
+theme_override_fonts/bold_font = ExtResource("6_0mtms")
 theme_override_font_sizes/normal_font_size = 20
-text = "Aqui va la coartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd v oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd
+bbcode_enabled = true
+text = "Aqui [color=red]va[/color] la coartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasd v oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd oartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasdoartadaasdasdasdasdasdasdadasdasdasd
 as
 dasdasd
 as
@@ -123,14 +128,15 @@ as
 
 [node name="BurbujaEvidencia1" type="TextureButton" parent="."]
 layout_mode = 2
-anchor_left = 0.302
-anchor_top = 0.761
-anchor_right = 0.468
-anchor_bottom = 0.968
-offset_left = 0.0959778
-offset_top = -0.128021
-offset_right = -0.136047
-offset_bottom = 3.73602
+anchor_left = 0.039
+anchor_top = 0.75
+anchor_right = 0.205
+anchor_bottom = 0.963
+offset_left = 0.0719986
+offset_top = -3.05176e-05
+offset_right = -0.160049
+offset_bottom = -0.0240479
+grow_vertical = 0
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_uxpx0")
 texture_pressed = ExtResource("6_muka7")
@@ -153,10 +159,14 @@ expand_mode = 1
 
 [node name="BurbujaEvidencia2" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 600.0
-offset_top = 483.0
-offset_right = 816.0
-offset_bottom = 636.0
+anchor_left = 0.398
+anchor_top = 0.75
+anchor_right = 0.586
+anchor_bottom = 0.986
+offset_left = 0.503967
+offset_top = -3.05176e-05
+offset_right = -0.0720215
+offset_bottom = 0.0719604
 size_flags_horizontal = 3
 texture_normal = ExtResource("6_cuctb")
 texture_pressed = ExtResource("8_j47ws")
@@ -179,10 +189,14 @@ expand_mode = 1
 
 [node name="BurbujaEvidencia3" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 879.0
-offset_top = 486.0
-offset_right = 1088.0
-offset_bottom = 638.0
+anchor_left = 0.763
+anchor_top = 0.75
+anchor_right = 0.944
+anchor_bottom = 0.985
+offset_left = 0.0239868
+offset_top = -3.05176e-05
+offset_right = 0.511963
+offset_bottom = -0.280029
 size_flags_horizontal = 3
 texture_normal = ExtResource("8_bpdta")
 texture_pressed = ExtResource("10_4ofw8")
