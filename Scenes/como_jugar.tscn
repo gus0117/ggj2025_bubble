@@ -1,0 +1,166 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyoge6ydwcmey"]
+
+[ext_resource type="Script" path="res://Scripts/como_jugar.gd" id="1_0whnm"]
+[ext_resource type="Texture2D" uid="uid://btj7ngenshygn" path="res://Assets/UI/14 Border 03.png" id="1_yciam"]
+[ext_resource type="Texture2D" uid="uid://cdda46u4ptybi" path="res://Assets/MenuBackground/fondofinal.png" id="2_hfb7j"]
+[ext_resource type="Texture2D" uid="uid://d3sdssyod6hwb" path="res://Assets/Tutorial/tutorial 2.png" id="2_qke21"]
+[ext_resource type="Texture2D" uid="uid://cnbdyd11nip2e" path="res://Assets/Bubbles/Normal/BubbleText1.png" id="3_ni845"]
+[ext_resource type="Texture2D" uid="uid://7ptvuy7cxg4l" path="res://Assets/Tutorial/tutorial 3.png" id="4_f3xxj"]
+[ext_resource type="Theme" uid="uid://5wbfji3wdgbs" path="res://Resources/Button_Theme.tres" id="5_p3hu2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jtmd4"]
+texture = ExtResource("1_yciam")
+texture_margin_left = 20.0
+texture_margin_top = 19.0
+texture_margin_right = 18.0
+texture_margin_bottom = 17.0
+region_rect = Rect2(129, 65, 62, 62)
+
+[node name="ComoJugar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0whnm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -254.0
+offset_top = -104.0
+offset_right = 1666.0
+offset_bottom = 976.0
+texture = ExtResource("2_hfb7j")
+
+[node name="PanelContainer" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.061
+anchor_top = 0.144
+anchor_right = 0.938
+anchor_bottom = 0.941
+offset_left = 0.479996
+offset_top = -0.320007
+offset_right = 13.84
+offset_bottom = 0.0199585
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jtmd4")
+
+[node name="Tutorial 1" type="TextureRect" parent="PanelContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.079
+anchor_top = 0.186
+anchor_right = 0.265
+anchor_bottom = 0.695
+offset_left = -0.509003
+offset_top = 0.307999
+offset_right = -0.315033
+offset_bottom = -0.290039
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qke21")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PanelContainer/Tutorial 1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.239
+anchor_top = 1.127
+anchor_right = 1.147
+anchor_bottom = 1.282
+offset_left = 0.102001
+offset_top = -0.132019
+offset_right = -0.0460205
+offset_bottom = -0.11203
+grow_vertical = 0
+text = "Lee la coartada de los sospechoso para
+enterarte del caso"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.278
+anchor_right = 0.604
+anchor_bottom = 0.635
+offset_left = 0.04599
+offset_top = 0.0839844
+offset_right = -0.284058
+offset_bottom = 0.0299683
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ni845")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.134
+anchor_top = 1.347
+anchor_right = 1.265
+anchor_bottom = 1.685
+offset_left = 0.0460014
+offset_top = -0.0340271
+offset_right = 0.0639648
+offset_bottom = -0.0700073
+grow_vertical = 0
+text = "Selecciona una de las burbujas de texto
+para hablar con el sospechoso y 
+que te dé pistas del caso"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.802
+anchor_top = 0.17
+anchor_right = 0.898
+anchor_bottom = 0.691
+offset_left = -0.142029
+offset_top = 0.260002
+offset_right = -0.558105
+offset_bottom = 0.197968
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_f3xxj")
+
+[node name="Label3" type="Label" parent="PanelContainer/TextureRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.884
+anchor_top = 1.123
+anchor_right = 1.839
+anchor_bottom = 1.461
+offset_left = 0.00801086
+offset_top = 0.14798
+offset_right = 0.0319824
+offset_bottom = 0.111969
+grow_vertical = 0
+text = "Ten cuidado que no se impaciente,
+si lo hace, el caso se cerrará
+y no te dará mas pistas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolverMenu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.738
+anchor_top = 0.021
+anchor_right = 0.968
+anchor_bottom = 0.117
+offset_left = -0.160034
+offset_top = -0.380001
+offset_right = 0.239868
+offset_bottom = -0.260002
+grow_horizontal = 0
+theme = ExtResource("5_p3hu2")
+text = "REGRESAR"
+
+[connection signal="pressed" from="VolverMenu" to="." method="_on_volver_menu_pressed"]
