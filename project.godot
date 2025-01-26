@@ -17,6 +17,7 @@ boot_splash/image="res://Assets/WildCatsLogo.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://Assets/logo-policia.png"
+config/windows_native_icon="res://icono_policia.ico"
 
 [audio]
 
