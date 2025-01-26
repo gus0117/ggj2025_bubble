@@ -63,7 +63,7 @@ libraries = {
 }
 
 [node name="TimerPaciencia" type="Timer" parent="Sospechoso"]
-wait_time = 5.0
+wait_time = 3.5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
