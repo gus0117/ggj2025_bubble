@@ -1,24 +1,24 @@
 [gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_kjd2r"]
+[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_16yt6"]
 
 [resource]
-script = ExtResource("1_kjd2r")
+script = ExtResource("1_16yt6")
 titulo = "Sabores olvidados"
 nombre = "Juan Jackson "
 edad = 14
 pacienciaActual = 0.0
-coartada = "Mama me dijo que fuera a dormir ,eran las 22:30 estaba cansado y había vuelto de jugar"
+coartada = "Esto no tiene sentido, yo no tomé el helado. La [b]cuchara[/b] que encontraron podría haber sido usada por [b]cualquiera[/b], no solo yo. En cuanto al pote en mi cuarto, claramente alguien lo puso allí para [b]incriminarme[/b]. No tiene sentido que lo dejara a la vista si yo lo hubiera tomado. Sobre la remera con manchas... Bueno, tal vez me manché comiendo algo [b]completamente diferente[/b]. ¿Quién puede probar que era helado? Esto es solo una confusión."
 urlPrueba1 = "Cuchara"
-p1_debil = "Cuchara misteriosa desconozco de cuando sea."
-p1_incompleta = "Tiene una mancha párese helado?. Será de hoy."
-p1_completa = "Es una cuchara marcada de las que usa para la escuela, no es de hoy."
+p1_debil = "Una [b]cuchara sucia[/b] en el lavaplatos."
+p1_incompleta = "Una cuchara con [b]restos de helado[/b], encontrada en el lavaplatos."
+p1_completa = "La [b]cuchara favorita del acusado[/b], encontrada sucia con restos de chocolate en el lavaplatos, coincidiendo con el sabor del helado robado."
 urlPrueba2 = "Helado"
-p2_debil = "Pote de helado sucio."
-p2_incompleta = "Estaba en el tacho de basura, ¿Estará ocultando algo?"
-p2_completa = "El helado que desapareció era de un sabor diferente."
-urlPrueba3 = "Remera"
-p3_debil = "Remera oculta debajo de la cama."
-p3_incompleta = "La remera tiene manchas sutiles párese de helado."
-p3_completa = "No lavo bien la remera tiene manchas de el mismo helado."
+p2_debil = "Pote sucio de helado."
+p2_incompleta = "Estaba en el tacho de basura, [b]¿Estará ocultando algo?[/b]"
+p2_completa = "El pote vacío del helado desaparecido, hallado debajo de su cama. [b]Podríamos buscar huellas.[/b]"
+urlPrueba3 = "Remera manchada"
+p3_debil = "Remera [b]oculta debajo de la cama.[/b]"
+p3_incompleta = "La remera tiene manchas sutiles de lo que [b]parece de helado.[/b]"
+p3_completa = "Una remera del acusado con manchas marrones de chocolate fresco, hallada en [b]su canasto de ropa sucia.[/b]"
 esVerdad = false
