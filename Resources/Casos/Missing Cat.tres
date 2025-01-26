@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://ucl6w3mep6f4"]
 
 [ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_mj00g"]
 

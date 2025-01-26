@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cuxm13nayotxw" path="res://Scenes/game.tscn" id="1_vyxb3"]
 [ext_resource type="AudioStream" uid="uid://cd7ombn4rlj8" path="res://Assets/Music/caso2.wav" id="3_j6j0p"]
 [ext_resource type="Script" path="res://Scripts/pacientometro.gd" id="4_7dumn"]
-[ext_resource type="StyleBox" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
+[ext_resource type="StyleBox" uid="uid://bn20xqt2s461w" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
 [ext_resource type="Texture2D" uid="uid://bdesnety1momn" path="res://Assets/Nivel/fondofinal.png" id="6_kjym8"]
 
 [sub_resource type="Animation" id="Animation_sx1xx"]
@@ -63,7 +63,7 @@ libraries = {
 }
 
 [node name="TimerPaciencia" type="Timer" parent="Sospechoso"]
-wait_time = 3.5
+wait_time = 5.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
