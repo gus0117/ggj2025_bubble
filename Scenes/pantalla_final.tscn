@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://bddkittui7y5y" path="res://Assets/Bubbles/Pressed/BubbleText1Pressed.png" id="2_arj7u"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="2_rpauh"]
 [ext_resource type="Texture2D" uid="uid://cyhnsc7jp6rre" path="res://Assets/Bubbles/Normal/BubbleText2.png" id="3_wiian"]
-[ext_resource type="Texture2D" uid="uid://b31xv87an45yh" path="res://Assets/Bubbles/Hover/BubbleText1Hover.png" id="3_ypglk"]
+[ext_resource type="Texture2D" uid="uid://bbwbcbtvgbnky" path="res://Assets/Bubbles/Hover/BubbleText1Hover2.png" id="4_vxu1t"]
 [ext_resource type="Texture2D" uid="uid://pcljs4ai3u01" path="res://Assets/Bubbles/Pressed/BubbleText2Pressed.png" id="6_1r0as"]
-[ext_resource type="Texture2D" uid="uid://c3xck1bpkq8iy" path="res://Assets/Bubbles/Hover/BubbleText2Hover.png" id="7_i7b5i"]
 [ext_resource type="AudioStream" uid="uid://dw5ewkyayohls" path="res://Assets/SFX/burbujacorto.wav" id="8_y3xm1"]
+[ext_resource type="Texture2D" uid="uid://cr3u1w1nw2psk" path="res://Assets/Bubbles/Hover/BubbleText2Hover2.png" id="8_y58et"]
 
 [sub_resource type="Animation" id="Animation_s6q3j"]
 resource_name = "FadeInAll"
@@ -369,7 +369,7 @@ offset_right = 1221.0
 offset_bottom = 629.0
 texture_normal = ExtResource("1_x14p2")
 texture_pressed = ExtResource("2_arj7u")
-texture_hover = ExtResource("3_ypglk")
+texture_hover = ExtResource("4_vxu1t")
 
 [node name="Label" type="Label" parent="No_option"]
 layout_mode = 1
@@ -397,7 +397,7 @@ offset_right = 663.0
 offset_bottom = 642.0
 texture_normal = ExtResource("3_wiian")
 texture_pressed = ExtResource("6_1r0as")
-texture_hover = ExtResource("7_i7b5i")
+texture_hover = ExtResource("8_y58et")
 
 [node name="Label" type="Label" parent="Si_option"]
 layout_mode = 1
