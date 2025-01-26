@@ -1,9 +1,10 @@
-[gd_scene load_steps=82 format=4 uid="uid://nb2yjodo8oa3"]
+[gd_scene load_steps=83 format=4 uid="uid://nb2yjodo8oa3"]
 
 [ext_resource type="Texture2D" uid="uid://ycynuylu7gmf" path="res://Assets/MenuBackground/sky_texture.png" id="1_q11of"]
 [ext_resource type="Texture2D" uid="uid://biwlbir25yypf" path="res://Assets/MenuBackground/Texturelabs_Wood_189S.jpg" id="3_b2mxb"]
 [ext_resource type="Texture2D" uid="uid://dpl782f3nk5db" path="res://Assets/MenuBackground/iu.png" id="3_s5wqc"]
 [ext_resource type="PackedScene" uid="uid://dtkrhxygtd2tb" path="res://Scenes/menu_principal.tscn" id="4_7umro"]
+[ext_resource type="AudioStream" uid="uid://dm8rryxatkr1t" path="res://Assets/Music/caso1.wav" id="5_mn36k"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gclk1"]
 panorama = ExtResource("1_q11of")
@@ -1074,3 +1075,7 @@ mesh = SubResource("CylinderMesh_2ucow")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MenuPrincipal" parent="CanvasLayer" instance=ExtResource("4_7umro")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_mn36k")
+autoplay = true
