@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="ggj2025_bubble"
-run/main_scene="res://Scenes/menu_principal.tscn"
+run/main_scene="res://Scenes/menuback.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="res://Assets/logo-policia.png"
+config/icon="res://Assets/logo-policia.png"
 
 [audio]
 
@@ -21,6 +22,8 @@ general/text_to_speech=true
 
 [display]
 
+window/size/viewport_width=1320
+window/size/viewport_height=780
 window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
