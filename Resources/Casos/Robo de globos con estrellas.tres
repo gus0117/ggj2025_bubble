@@ -1,24 +1,24 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://b26m2qqe1eald"]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_bv0c2"]
+[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_r17cr"]
 
 [resource]
-script = ExtResource("1_bv0c2")
+script = ExtResource("1_r17cr")
 titulo = "Robo de globos con estrellas"
 nombre = "Rubén Baltazar López (payaso buble)"
 edad = 25
 pacienciaActual = 0.0
-coartada = "Yo no tengo nada que ver con ese robo. [color=#861d1d]Llegué tarde[/color] a la fiesta de mi antiguo jefe porque tuve un problema con el [color=#861d1d]maquillaje[/color]; me llevó más tiempo aplicarlo hoy. Sobre el frasco de maquillaje, ¡cualquiera podría tener uno igual! Los globos encontrados en mi [color=#861d1d]mochila[/color]... soy un payaso, debo tener esas cosas. Solo quiero seguir adelante con mi vida."
+coartada = "Yo no tengo nada que ver con ese robo. [color=#ff3333]Llegué tarde[/color] a la fiesta de mi antiguo jefe porque tuve un problema con el [color=#ff3333]maquillaje[/color]; me llevó más tiempo aplicarlo hoy. Sobre el frasco de maquillaje, ¡cualquiera podría tener uno igual! Los globos encontrados en mi [color=#ff3333]mochila[/color]... soy un payaso, debo tener esas cosas. Solo quiero seguir adelante con mi vida."
 urlPrueba1 = "Maquillaje"
 p1_debil = "Es solo un frasco de maquillaje."
-p1_incompleta = "Un frasco de maquillaje con [color=#861d1d]residuos[/color] de pintura que coinciden con el del sospechoso."
-p1_completa = "Un frasco de maquillaje profesional con restos de pintura azul y amarilla, los [color=#861d1d]mismos colores[/color] encontrados en la escena del robo."
+p1_incompleta = "Un frasco de maquillaje con [color=#ff3333]residuos[/color] de pintura que coinciden con el del sospechoso."
+p1_completa = "Un frasco de maquillaje profesional con restos de pintura azul y amarilla, los [color=#ff3333]mismos colores[/color] encontrados en la escena del robo."
 urlPrueba2 = "Hora de llegada"
 p2_debil = "El sospechoso llegó tarde al trabajo."
 p2_incompleta = "El sospechoso llegó tarde a la fiesta de su antiguo jefe."
-p2_completa = "El sospechoso llegó exactamente 20 minutos tarde a la fiesta de su antiguo jefe, a las 3:20 PM, mientras el [color=#861d1d]robo ocurrió entre las 2:50 y 3:10 PM.[/color]"
+p2_completa = "El sospechoso llegó exactamente 20 minutos tarde a la fiesta de su antiguo jefe, a las 3:20 PM, mientras el [color=#ff3333]robo ocurrió entre las 2:50 y 3:10 PM.[/color]"
 urlPrueba3 = "Mochila"
 p3_debil = "Unos globos en su mochila, pero un payaso debe tenerlos para su trabajo."
-p3_incompleta = "Los globos en esta mochila son [color=#861d1d]parecidos a los del cumpleaños.[/color]"
-p3_completa = "Los globos en esta mochila [color=#861d1d]tienen el nombre Tobías[/color] en ellos, son los del cumpleaños!"
+p3_incompleta = "Los globos en esta mochila son [color=#ff3333]parecidos a los del cumpleaños.[/color]"
+p3_completa = "Los globos en esta mochila [color=#ff3333]tienen el nombre Tobías[/color] en ellos, son los del cumpleaños!"
 esVerdad = false
