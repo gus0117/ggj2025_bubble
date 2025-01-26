@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://s513l72tvl2q"]
 
 [ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_r17cr"]
 
 [resource]
 script = ExtResource("1_r17cr")
 titulo = "Robo de globos con estrellas"
-nombre = "Rubén Baltazar López (payaso buble)"
+nombre = "Payaso Bubble"
 edad = 25
 pacienciaActual = 0.0
 coartada = "Yo no tengo nada que ver con ese robo. [color=#ff3333]Llegué tarde[/color] a la fiesta de mi antiguo jefe porque tuve un problema con el [color=#ff3333]maquillaje[/color]; me llevó más tiempo aplicarlo hoy. Sobre el frasco de maquillaje, ¡cualquiera podría tener uno igual! Los globos encontrados en mi [color=#ff3333]mochila[/color]... soy un payaso, debo tener esas cosas. Solo quiero seguir adelante con mi vida."

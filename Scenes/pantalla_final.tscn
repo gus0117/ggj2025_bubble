@@ -311,7 +311,7 @@ offset_bottom = 151.442
 rotation = -0.0925025
 theme_override_colors/font_color = Color(0.121569, 0.121569, 0.121569, 1)
 theme_override_font_sizes/font_size = 25
-text = "¿Tu que crees, Bubbles?"
+text = "¿Tú que crees \"Bubbles\"?"
 horizontal_alignment = 1
 
 [node name="Dialogo2" type="TextureRect" parent="."]

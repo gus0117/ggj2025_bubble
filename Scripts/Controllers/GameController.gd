@@ -27,7 +27,7 @@ func _ready() -> void:
 
 # Actualiza la skin del personaje
 func updateCharacter():
-	var path = "res://Assets/Sospechosos/"+"default_char"+".png"
+	var path = "res://Assets/Sospechosos/"+casoActual.nombre+".png"
 	sprSospechoso.texture = load(path)
 	timer_paciencia.start()
 
