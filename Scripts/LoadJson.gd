@@ -4,7 +4,7 @@ var saveCaseResourcePath:= "res://Resources/Casos/"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#EJECUTAR SOLO UNA VEZ CUANDO SE ACTUALICE LA BASE DE DATOS
-	#CaseResourceGenerator()
+	CaseResourceGenerator()
 	pass
 
 
