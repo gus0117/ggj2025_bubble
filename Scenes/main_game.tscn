@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://tg433ahge1et"]
+[gd_scene load_steps=13 format=3 uid="uid://tg433ahge1et"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/GameController.gd" id="1_2xqlm"]
 [ext_resource type="Texture2D" uid="uid://by340ky8at0q5" path="res://Assets/Sospechosos/default_char.png" id="1_k3srg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/pacientometro.gd" id="4_7dumn"]
 [ext_resource type="StyleBox" uid="uid://bn20xqt2s461w" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
 [ext_resource type="Texture2D" uid="uid://bdesnety1momn" path="res://Assets/Nivel/fondofinal.png" id="6_kjym8"]
+[ext_resource type="PackedScene" uid="uid://dkcdyxo1wypjs" path="res://Scenes/feedback.tscn" id="7_kmbn3"]
 
 [sub_resource type="Animation" id="Animation_sx1xx"]
 resource_name = "Temblar"
@@ -31,7 +32,7 @@ _data = {
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eenr2"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.140447, 0.140447, 0.140447, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -67,16 +68,18 @@ wait_time = 5.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Game" parent="CanvasLayer" instance=ExtResource("1_vyxb3")]
+
 [node name="Indicador" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchor_left = 0.915
-anchor_top = 0.014
-anchor_right = 0.992
-anchor_bottom = 0.289
-offset_left = -105.8
-offset_top = 49.08
-offset_right = -105.504
-offset_bottom = 48.88
+anchor_left = 0.835
+anchor_top = 0.077
+anchor_right = 0.912
+anchor_bottom = 0.352
+offset_left = -0.200073
+offset_top = -0.0600052
+offset_right = 0.0958252
+offset_bottom = -0.26004
 grow_horizontal = 0
 
 [node name="Pacientometro" type="ProgressBar" parent="CanvasLayer/Indicador"]
@@ -150,7 +153,12 @@ text = "🤬"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Game" parent="CanvasLayer" instance=ExtResource("1_vyxb3")]
+[node name="Feedback" parent="CanvasLayer/Indicador" instance=ExtResource("7_kmbn3")]
+process_mode = 3
+offset_left = -28.0
+offset_top = 120.0
+offset_right = -28.0
+offset_bottom = 120.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3

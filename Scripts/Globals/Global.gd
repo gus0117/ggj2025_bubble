@@ -5,7 +5,7 @@ signal on_reset_game # Esta señal se activa cuando se realizaron los todos caso
 
 var respuestaCasoActual: bool
 var respuestaJugador: bool
-var indiceCasos: int = 0
+var indiceCasos: int = 1
 
 @export var db: CasosDB
 
