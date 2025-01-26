@@ -1,13 +1,35 @@
-[gd_scene load_steps=14 format=3 uid="uid://tg433ahge1et"]
+[gd_scene load_steps=13 format=3 uid="uid://tg433ahge1et"]
 
 [ext_resource type="Script" path="res://Scripts/Controllers/GameController.gd" id="1_2xqlm"]
 [ext_resource type="Texture2D" uid="uid://by340ky8at0q5" path="res://Assets/Sospechosos/default_char.png" id="1_k3srg"]
 [ext_resource type="PackedScene" uid="uid://cuxm13nayotxw" path="res://Scenes/game.tscn" id="1_vyxb3"]
-[ext_resource type="Resource" uid="uid://eyp8yi6ififr" path="res://Resources/Casos/CasosDB.tres" id="2_lfcr7"]
+[ext_resource type="Resource" uid="uid://cajej7qwgqsxh" path="res://Resources/Casos/CasosDB.tres" id="2_lfcr7"]
 [ext_resource type="AudioStream" uid="uid://cd7ombn4rlj8" path="res://Assets/Music/caso2.wav" id="3_j6j0p"]
 [ext_resource type="Script" path="res://Scripts/pacientometro.gd" id="4_7dumn"]
-[ext_resource type="StyleBox" uid="uid://vjduxy04j0bw" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
+[ext_resource type="StyleBox" path="res://Resources/Pacientometro_theme.tres" id="5_t8bru"]
 [ext_resource type="Texture2D" uid="uid://bdesnety1momn" path="res://Assets/Nivel/fondofinal.png" id="6_kjym8"]
+
+[sub_resource type="Animation" id="Animation_sx1xx"]
+resource_name = "Temblar"
+length = 0.15
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(965, 354), Vector2(969, 354), Vector2(961, 354), Vector2(963, 351), Vector2(965, 356)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wrmgh"]
+_data = {
+"Temblar": SubResource("Animation_sx1xx")
+}
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eenr2"]
 bg_color = Color(0, 0, 0, 1)
@@ -23,47 +45,27 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="Animation" id="Animation_6m5ns"]
-resource_name = "Nervioso"
-length = 0.15
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(780, 250), Vector2(777, 250), Vector2(780, 248), Vector2(783, 250)]
-}
-
-[sub_resource type="Animation" id="Animation_hba61"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(778, 250)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wrmgh"]
-_data = {
-"Nervioso": SubResource("Animation_6m5ns"),
-"RESET": SubResource("Animation_hba61")
-}
-
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_2xqlm")
 db = ExtResource("2_lfcr7")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(657, 387.5)
+scale = Vector2(0.694792, 0.750926)
+texture = ExtResource("6_kjym8")
+
+[node name="Sospechoso" type="Sprite2D" parent="."]
+position = Vector2(965, 354)
+scale = Vector2(0.556, 0.650368)
+texture = ExtResource("1_k3srg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sospechoso"]
+libraries = {
+"": SubResource("AnimationLibrary_wrmgh")
+}
+
+[node name="TimerPaciencia" type="Timer" parent="Sospechoso"]
+wait_time = 5.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -152,31 +154,16 @@ vertical_alignment = 1
 
 [node name="Game" parent="CanvasLayer" instance=ExtResource("1_vyxb3")]
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(616, 324)
-scale = Vector2(0.645833, 0.661111)
-texture = ExtResource("6_kjym8")
-
-[node name="Sospechoso" type="Sprite2D" parent="."]
-position = Vector2(778, 250)
-scale = Vector2(0.556, 0.650368)
-texture = ExtResource("1_k3srg")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sospechoso"]
-libraries = {
-"": SubResource("AnimationLibrary_wrmgh")
-}
-
-[node name="TimerPaciencia" type="Timer" parent="Sospechoso"]
-wait_time = 5.0
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 stream = ExtResource("3_j6j0p")
 volume_db = -9.582
 autoplay = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(660, 390)
+
+[connection signal="timeout" from="Sospechoso/TimerPaciencia" to="." method="_on_timer_paciencia_timeout"]
 [connection signal="on_angry_bubble" from="CanvasLayer/Game" to="." method="_on_angry_bubble"]
 [connection signal="on_normal_bubble" from="CanvasLayer/Game" to="." method="_on_normal_bubble"]
 [connection signal="on_relax_bubble" from="CanvasLayer/Game" to="." method="_on_relax_bubble"]
-[connection signal="timeout" from="Sospechoso/TimerPaciencia" to="." method="_on_timer_paciencia_timeout"]
