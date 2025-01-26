@@ -1,24 +1,24 @@
-[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Caso" load_steps=2 format=3 uid="uid://boeeds3jf7da1"]
 
-[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_16yt6"]
+[ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_fj2b2"]
 
 [resource]
-script = ExtResource("1_16yt6")
+script = ExtResource("1_fj2b2")
 titulo = "Sabores olvidados"
 nombre = "Juan Jackson "
 edad = 14
 pacienciaActual = 0.0
-coartada = "Esto no tiene sentido, yo no tomé el helado. La [b]cuchara[/b] que encontraron podría haber sido usada por [b]cualquiera[/b], no solo yo. En cuanto al pote en mi cuarto, claramente alguien lo puso allí para [b]incriminarme[/b]. No tiene sentido que lo dejara a la vista si yo lo hubiera tomado. Sobre la remera con manchas... Bueno, tal vez me manché comiendo algo [b]completamente diferente[/b]. ¿Quién puede probar que era helado? Esto es solo una confusión."
+coartada = "Esto no tiene sentido, yo no tomé el helado. La [color=#861d1d]cuchara[/color] que encontraron podría haber sido usada por [color=#861d1d]cualquiera[/color], no solo yo. En cuanto al pote en mi cuarto, claramente alguien lo puso allí para [color=#861d1d]incriminarme[/color]. No tiene sentido que lo dejara a la vista si yo lo hubiera tomado. Sobre la remera con manchas... Bueno, tal vez me manché comiendo algo [color=#861d1d]completamente diferente[/color]. ¿Quién puede probar que era helado? Esto es solo una confusión."
 urlPrueba1 = "Cuchara"
-p1_debil = "Una [b]cuchara sucia[/b] en el lavaplatos."
-p1_incompleta = "Una cuchara con [b]restos de helado[/b], encontrada en el lavaplatos."
-p1_completa = "La [b]cuchara favorita del acusado[/b], encontrada sucia con restos de chocolate en el lavaplatos, coincidiendo con el sabor del helado robado."
+p1_debil = "Una [color=#861d1d]cuchara sucia[/color] en el lavaplatos."
+p1_incompleta = "Una cuchara con [color=#861d1d]restos de helado[/color], encontrada en el lavaplatos."
+p1_completa = "La [color=#861d1d]cuchara favorita del acusado[/color], encontrada sucia con restos de chocolate en el lavaplatos, coincidiendo con el sabor del helado robado."
 urlPrueba2 = "Helado"
 p2_debil = "Pote sucio de helado."
-p2_incompleta = "Estaba en el tacho de basura, [b]¿Estará ocultando algo?[/b]"
-p2_completa = "El pote vacío del helado desaparecido, hallado debajo de su cama. [b]Podríamos buscar huellas.[/b]"
+p2_incompleta = "Estaba en el tacho de basura, [color=#861d1d]¿Estará ocultando algo?[/color]"
+p2_completa = "El pote vacío del helado desaparecido, hallado debajo de su cama. [color=#861d1d]Podríamos buscar huellas.[/color]"
 urlPrueba3 = "Remera manchada"
-p3_debil = "Remera [b]oculta debajo de la cama.[/b]"
-p3_incompleta = "La remera tiene manchas sutiles de lo que [b]parece de helado.[/b]"
-p3_completa = "Una remera del acusado con manchas marrones de chocolate fresco, hallada en [b]su canasto de ropa sucia.[/b]"
+p3_debil = "Remera [color=#861d1d]oculta debajo de la cama.[/color]"
+p3_incompleta = "La remera tiene manchas sutiles de lo que [color=#861d1d]parece de helado.[/color]"
+p3_completa = "Una remera del acusado con manchas marrones de chocolate fresco, hallada en [color=#861d1d]su canasto de ropa sucia.[/color]"
 esVerdad = false

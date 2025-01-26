@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="CasosDB" load_steps=6 format=3 uid="uid://eyp8yi6ififr"]
+[gd_resource type="Resource" script_class="CasosDB" load_steps=6 format=3 uid="uid://cajej7qwgqsxh"]
 
 [ext_resource type="Script" path="res://Scripts/Resources/Caso.gd" id="1_2tlqk"]
 [ext_resource type="Resource" path="res://Resources/Casos/Missing Cat.tres" id="2_0p6al"]
 [ext_resource type="Script" path="res://Scripts/Resources/CasosDB.gd" id="2_rsuyc"]
-[ext_resource type="Resource" uid="uid://dmwqg8hlp16bj" path="res://Resources/Casos/Robo de globos con estrellas.tres" id="3_s4cef"]
+[ext_resource type="Resource" path="res://Resources/Casos/Robo de globos con estrellas.tres" id="3_s4cef"]
 [ext_resource type="Resource" path="res://Resources/Casos/Sabores olvidados.tres" id="4_js8r7"]
 
 [resource]
