@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsr0exsyuu0oc"]
+[gd_scene load_steps=12 format=3 uid="uid://dsr0exsyuu0oc"]
 
 [ext_resource type="Texture2D" uid="uid://cnbdyd11nip2e" path="res://Assets/Bubbles/Normal/BubbleText1.png" id="1_x14p2"]
 [ext_resource type="Texture2D" uid="uid://bddkittui7y5y" path="res://Assets/Bubbles/Pressed/BubbleText1Pressed.png" id="2_arj7u"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b31xv87an45yh" path="res://Assets/Bubbles/Hover/BubbleText1Hover.png" id="3_ypglk"]
 [ext_resource type="Texture2D" uid="uid://pcljs4ai3u01" path="res://Assets/Bubbles/Pressed/BubbleText2Pressed.png" id="6_1r0as"]
 [ext_resource type="Texture2D" uid="uid://c3xck1bpkq8iy" path="res://Assets/Bubbles/Hover/BubbleText2Hover.png" id="7_i7b5i"]
+[ext_resource type="AudioStream" uid="uid://dw5ewkyayohls" path="res://Assets/SFX/burbujacorto.wav" id="8_y3xm1"]
 
 [sub_resource type="Animation" id="Animation_s6q3j"]
 resource_name = "FadeInAll"
@@ -94,6 +95,29 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../AudioStreamPlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.3, 2.16667, 4.03333, 7.43333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_6au7q"]
@@ -371,3 +395,7 @@ root_node = NodePath("../Dialogo1")
 libraries = {
 "": SubResource("AnimationLibrary_k6gbf")
 }
+autoplay = "FadeInAll"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_y3xm1")
