@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkcdyxo1wypjs"]
+
+[ext_resource type="Script" path="res://Scripts/feedback.gd" id="1_e8u2u"]
+
+[node name="Feedback" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e8u2u")
+angry_emoji = "💢"
+calm_emoji = "😀"
+
+[node name="content" type="Label" parent="."]
+layout_mode = 0
+offset_left = -19.0
+offset_right = 21.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
