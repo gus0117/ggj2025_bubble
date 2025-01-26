@@ -1,7 +1,7 @@
 ## Nombre del Proyecto: Crime Investigator
 
 Autores: WildCats
-Fecha: 27 de enero de 2025  
+Fecha: 26 de enero de 2025  
 
 ## Descripción  
 Un videojuego desarrollado durante la Global Game Jam 2025, inspirado en el tema "Burbujas".  
