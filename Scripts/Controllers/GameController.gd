@@ -12,7 +12,7 @@ class_name GameController
 
 #Variables
 var casoActual : Caso
-var casoIndice : int = 0
+var casoIndice : int = 0 #Inicia en 0
 
 #default
 var defaultSprite = preload("res://Assets/Sospechosos/default_char.png")
