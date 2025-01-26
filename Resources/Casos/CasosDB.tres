@@ -8,4 +8,4 @@
 
 [resource]
 script = ExtResource("2_rsuyc")
-casos = Array[ExtResource("1_2tlqk")]([ExtResource("2_0p6al"), ExtResource("3_s4cef"), ExtResource("4_js8r7")])
+casos = Array[ExtResource("1_2tlqk")]([ExtResource("4_js8r7"), ExtResource("2_0p6al"), ExtResource("3_s4cef")])
