@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://by7yevm60tkn3" path="res://Assets/Popup/Carpetin2.png" id="5_6prri"]
 [ext_resource type="FontFile" uid="uid://c3l77lbeow38v" path="res://Assets/Fonts/Gargle Ex Bd.otf" id="7_7q2g0"]
 [ext_resource type="FontFile" uid="uid://dovvjrgu4g06e" path="res://Assets/Fonts/veteran typewriter.ttf" id="7_jr15u"]
-[ext_resource type="Theme" uid="uid://hxmqenic15hh" path="res://Resources/Button_popup.tres" id="8_awtr0"]
+[ext_resource type="Theme" uid="uid://dqdpqleqve0n8" path="res://Resources/Button_popup.tres" id="8_awtr0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ig45"]
 
@@ -279,15 +279,15 @@ expand_mode = 1
 [node name="Blur" type="Panel" parent="Panel/Body"]
 material = SubResource("ShaderMaterial_oyygm")
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.496
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.496
 anchor_bottom = 0.5
-offset_left = -603.5
-offset_top = -307.5
-offset_right = 551.5
-offset_bottom = 336.5
+offset_left = -860.747
+offset_top = -477.706
+offset_right = 860.253
+offset_bottom = 502.294
 grow_horizontal = 2
 grow_vertical = 2
 
